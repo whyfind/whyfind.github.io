@@ -57,15 +57,19 @@
 
 
 
-<meta name="description" content="世界那么大，我想去看看！">
-<meta property="og:type" content="website">
-<meta property="og:title" content="whyfind">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta name="description" content="2016的第一个开始。1.第一个坑解决办法：1deploy 的 repository 要从 HTTPS值改成SSH值
+2.第二个坑错误信息是这样的：1234Please make sure you have the correct access rights and the repository exists.FATAL Something\&apos;s wrong. Maybe you can find">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo deploy操作踩过的坑">
+<meta property="og:url" content="http://yoursite.com/2016/01/24/关于Hexo-deploy操作踩过的坑/index.html">
 <meta property="og:site_name" content="whyfind">
-<meta property="og:description" content="世界那么大，我想去看看！">
+<meta property="og:description" content="2016的第一个开始。1.第一个坑解决办法：1deploy 的 repository 要从 HTTPS值改成SSH值
+2.第二个坑错误信息是这样的：1234Please make sure you have the correct access rights and the repository exists.FATAL Something\&apos;s wrong. Maybe you can find">
+<meta property="og:updated_time" content="2016-01-24T13:18:47.818Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="whyfind">
-<meta name="twitter:description" content="世界那么大，我想去看看！">
+<meta name="twitter:title" content="Hexo deploy操作踩过的坑">
+<meta name="twitter:description" content="2016的第一个开始。1.第一个坑解决办法：1deploy 的 repository 要从 HTTPS值改成SSH值
+2.第二个坑错误信息是这样的：1234Please make sure you have the correct access rights and the repository exists.FATAL Something\&apos;s wrong. Maybe you can find">
 
 
 
@@ -83,7 +87,7 @@
   };
 </script>
 
-  <title> whyfind </title>
+  <title> Hexo deploy操作踩过的坑 | whyfind </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -100,9 +104,7 @@
   
   
 
-  <div class="container one-collumn  
-   page-home 
- ">
+  <div class="container one-collumn  page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -181,15 +183,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
 
+  <div id="posts" class="posts-expand">
     
-
-    
-    
-
-    
-      
 
   
   
@@ -209,102 +205,7 @@
             
             
               
-                
-                <a class="post-title-link" href="/2016/01/24/如何创建Hexo 博客？/" itemprop="url">
-                  如何创建Hexo 博客？
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-01-24T21:12:45+08:00" content="2016-01-24">
-              2016-01-24
-            </time>
-          </span>
-
-          
-
-          
-            
-          
-
-          
-
-          
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>Welcome to <a href="http://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="http://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="http://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick_Start"><a href="#Quick_Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create_a_new_post"><a href="#Create_a_new_post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run_server"><a href="#Run_server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate_static_files"><a href="#Generate_static_files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy_to_remote_sites"><a href="#Deploy_to_remote_sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-
-          
-        
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/01/24/Hexo-deploy操作踩过的坑/" itemprop="url">
-                  关于Hexo deploy操作踩过的坑
-                </a>
+                Hexo deploy操作踩过的坑
               
             
           </h1>
@@ -342,9 +243,7 @@
       
 
       
-        
-          
-            <h3 id="2016_u7684_u7B2C_u4E00_u4E2A_u5F00_u59CB_u3002"><a href="#2016_u7684_u7B2C_u4E00_u4E2A_u5F00_u59CB_u3002" class="headerlink" title="2016的第一个开始。"></a>2016的第一个开始。</h3><h3 id="1-_u7B2C_u4E00_u4E2A_u5751"><a href="#1-_u7B2C_u4E00_u4E2A_u5751" class="headerlink" title="1.第一个坑"></a>1.第一个坑</h3><p>解决办法：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">deploy 的 repository 要从 HTTPS值改成SSH值</span><br></pre></td></tr></table></figure></p>
+        <h3 id="2016_u7684_u7B2C_u4E00_u4E2A_u5F00_u59CB_u3002"><a href="#2016_u7684_u7B2C_u4E00_u4E2A_u5F00_u59CB_u3002" class="headerlink" title="2016的第一个开始。"></a>2016的第一个开始。</h3><h3 id="1-_u7B2C_u4E00_u4E2A_u5751"><a href="#1-_u7B2C_u4E00_u4E2A_u5751" class="headerlink" title="1.第一个坑"></a>1.第一个坑</h3><p>解决办法：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">deploy 的 repository 要从 HTTPS值改成SSH值</span><br></pre></td></tr></table></figure></p>
 <h3 id="2-_u7B2C_u4E8C_u4E2A_u5751"><a href="#2-_u7B2C_u4E8C_u4E2A_u5751" class="headerlink" title="2.第二个坑"></a>2.第二个坑</h3><p>错误信息是这样的：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Please make sure you have the correct access rights and the repository exists.</span><br><span class="line">FATAL Something\<span class="string">'s wrong. Maybe you can find the solution here: http://hexo.io/docs/troubleshooting.html</span><br><span class="line">Error: Permission denied (publickey).</span><br><span class="line">fatal: Could not read from remote repository.</span></span><br></pre></td></tr></table></figure></p>
 <p>解决办法:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">eval</span> <span class="string">"<span class="variable">$(ssh-agent -s)</span>"</span></span><br><span class="line">$ ssh-add</span><br></pre></td></tr></table></figure></p>
 <h3 id="3-_u7B2C_u4E09_u4E2A_u5751"><a href="#3-_u7B2C_u4E09_u4E2A_u5751" class="headerlink" title="3.第三个坑"></a>3.第三个坑</h3><p>错误信息是这样的：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git branch 出错</span><br></pre></td></tr></table></figure></p>
@@ -352,8 +251,6 @@
 <h3 id="4-_u7B2C_u56DB_u4E2A_u5751"><a href="#4-_u7B2C_u56DB_u4E2A_u5751" class="headerlink" title="4.第四个坑"></a>4.第四个坑</h3><p>错误信息是这样的：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ git push origin hexo</span><br><span class="line">fatal: <span class="string">'origin'</span> does not appear to be a git repository</span><br><span class="line">fatal: Could not <span class="built_in">read</span> from remote repository.</span><br></pre></td></tr></table></figure></p>
 <p>解决办法：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git remote add origin https://github.com/whyfind/whyfind.github.io.git</span><br></pre></td></tr></table></figure></p>
 
-          
-        
       
     </div>
 
@@ -361,110 +258,32 @@
       
 
       
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
             
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
             
-              
-                
-                <a class="post-title-link" href="/2016/01/24/关于Hexo-deploy操作踩过的坑/" itemprop="url">
-                  Hexo deploy操作踩过的坑
-                </a>
-              
+              <a href="/2016/01/24/Hexo-deploy操作踩过的坑/" rel="prev" title="关于Hexo deploy操作踩过的坑">
+                关于Hexo deploy操作踩过的坑 <i class="fa fa-chevron-right"></i>
+              </a>
             
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-01-24T20:05:33+08:00" content="2016-01-24">
-              2016-01-24
-            </time>
-          </span>
-
-          
-
-          
-            
-          
-
-          
-
-          
-          
+          </div>
         </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
-        
-          
-            <h3 id="2016_u7684_u7B2C_u4E00_u4E2A_u5F00_u59CB_u3002"><a href="#2016_u7684_u7B2C_u4E00_u4E2A_u5F00_u59CB_u3002" class="headerlink" title="2016的第一个开始。"></a>2016的第一个开始。</h3><h3 id="1-_u7B2C_u4E00_u4E2A_u5751"><a href="#1-_u7B2C_u4E00_u4E2A_u5751" class="headerlink" title="1.第一个坑"></a>1.第一个坑</h3><p>解决办法：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">deploy 的 repository 要从 HTTPS值改成SSH值</span><br></pre></td></tr></table></figure></p>
-<h3 id="2-_u7B2C_u4E8C_u4E2A_u5751"><a href="#2-_u7B2C_u4E8C_u4E2A_u5751" class="headerlink" title="2.第二个坑"></a>2.第二个坑</h3><p>错误信息是这样的：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Please make sure you have the correct access rights and the repository exists.</span><br><span class="line">FATAL Something\<span class="string">'s wrong. Maybe you can find the solution here: http://hexo.io/docs/troubleshooting.html</span><br><span class="line">Error: Permission denied (publickey).</span><br><span class="line">fatal: Could not read from remote repository.</span></span><br></pre></td></tr></table></figure></p>
-<p>解决办法:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">eval</span> <span class="string">"<span class="variable">$(ssh-agent -s)</span>"</span></span><br><span class="line">$ ssh-add</span><br></pre></td></tr></table></figure></p>
-<h3 id="3-_u7B2C_u4E09_u4E2A_u5751"><a href="#3-_u7B2C_u4E09_u4E2A_u5751" class="headerlink" title="3.第三个坑"></a>3.第三个坑</h3><p>错误信息是这样的：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git branch 出错</span><br></pre></td></tr></table></figure></p>
-<p>解决办法:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git init</span><br></pre></td></tr></table></figure></p>
-<h3 id="4-_u7B2C_u56DB_u4E2A_u5751"><a href="#4-_u7B2C_u56DB_u4E2A_u5751" class="headerlink" title="4.第四个坑"></a>4.第四个坑</h3><p>错误信息是这样的：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ git push origin hexo</span><br><span class="line">fatal: <span class="string">'origin'</span> does not appear to be a git repository</span><br><span class="line">fatal: Could not <span class="built_in">read</span> from remote repository.</span><br></pre></td></tr></table></figure></p>
-<p>解决办法：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git remote add origin https://github.com/whyfind/whyfind.github.io.git</span><br></pre></td></tr></table></figure></p>
-
-          
-        
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </article>
 
 
-    
 
-  </section>
-
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -472,6 +291,10 @@
 
 
           
+  <div class="comments" id="comments">
+    
+  </div>
+
 
         </div>
         
@@ -491,8 +314,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <section class="site-overview sidebar-panel ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/default_avatar.jpg"
@@ -565,6 +397,23 @@
 
       </section>
 
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc-indicator-top post-toc-indicator">
+            <i class="fa fa-angle-double-up"></i>
+          </div>
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#2016_u7684_u7B2C_u4E00_u4E2A_u5F00_u59CB_u3002"><span class="nav-number">1.</span> <span class="nav-text">2016的第一个开始。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-_u7B2C_u4E00_u4E2A_u5751"><span class="nav-number">2.</span> <span class="nav-text">1.第一个坑</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-_u7B2C_u4E8C_u4E2A_u5751"><span class="nav-number">3.</span> <span class="nav-text">2.第二个坑</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-_u7B2C_u4E09_u4E2A_u5751"><span class="nav-number">4.</span> <span class="nav-text">3.第三个坑</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-_u7B2C_u56DB_u4E2A_u5751"><span class="nav-number">5.</span> <span class="nav-text">4.第四个坑</span></a></li></ol></div>
+            
+          </div>
+          <div class="post-toc-indicator-bottom post-toc-indicator">
+            <i class="fa fa-angle-double-down"></i>
+          </div>
+        </section>
       
 
     </div>
@@ -639,6 +488,167 @@
   
 
   
+  
+<script type="text/javascript" src="/js/src/scrollspy.js?v=0.5.0"></script>
+
+<script type="text/javascript" id="sidebar.toc.highlight">
+  $(document).ready(function () {
+    var tocSelector = '.post-toc';
+    var $tocSelector = $(tocSelector);
+    var activeCurrentSelector = '.active-current';
+
+    $tocSelector
+      .on('activate.bs.scrollspy', function () {
+        var $currentActiveElement = $(tocSelector + ' .active').last();
+
+        removeCurrentActiveClass();
+        $currentActiveElement.addClass('active-current');
+
+        $tocSelector[0].scrollTop = $currentActiveElement.position().top;
+      })
+      .on('clear.bs.scrollspy', function () {
+        removeCurrentActiveClass();
+      });
+
+    function removeCurrentActiveClass () {
+      $(tocSelector + ' ' + activeCurrentSelector)
+        .removeClass(activeCurrentSelector.substring(1));
+    }
+
+    function processTOC () {
+      getTOCMaxHeight();
+      toggleTOCOverflowIndicators();
+    }
+
+    function getTOCMaxHeight () {
+      var height = $('.sidebar').height() -
+                   $tocSelector.position().top -
+                   $('.post-toc-indicator-bottom').height();
+
+      $tocSelector.css('height', height);
+
+      return height;
+    }
+
+    function toggleTOCOverflowIndicators () {
+      tocOverflowIndicator(
+        '.post-toc-indicator-top',
+        $tocSelector.scrollTop() > 0 ? 'show' : 'hide'
+      );
+
+      tocOverflowIndicator(
+        '.post-toc-indicator-bottom',
+        $tocSelector.scrollTop() >= $tocSelector.find('ol').height() - $tocSelector.height() ? 'hide' : 'show'
+      )
+    }
+
+    $(document).on('sidebar.motion.complete', function () {
+      processTOC();
+    });
+
+    $('body').scrollspy({ target: tocSelector });
+    $(window).on('resize', function () {
+      if ( $('.sidebar').hasClass('sidebar-active') ) {
+        processTOC();
+      }
+    });
+
+    onScroll($tocSelector);
+
+    function onScroll (element) {
+      element.on('mousewheel DOMMouseScroll', function (event) {
+          var oe = event.originalEvent;
+          var delta = oe.wheelDelta || -oe.detail;
+
+          this.scrollTop += ( delta < 0 ? 1 : -1 ) * 30;
+          event.preventDefault();
+
+          toggleTOCOverflowIndicators();
+      });
+    }
+
+    function tocOverflowIndicator (indicator, action) {
+      var $indicator = $(indicator);
+      var opacity = action === 'show' ? 1 : 0;
+      $indicator.velocity ?
+        $indicator.velocity('stop').velocity({
+          opacity: opacity
+        }, { duration: 100 }) :
+        $indicator.stop().animate({
+          opacity: opacity
+        }, 100);
+    }
+
+  });
+</script>
+
+<script type="text/javascript" id="sidebar.nav">
+  $(document).ready(function () {
+    var html = $('html');
+    var TAB_ANIMATE_DURATION = 200;
+    var hasVelocity = $.isFunction(html.velocity);
+
+    $('.sidebar-nav li').on('click', function () {
+      var item = $(this);
+      var activeTabClassName = 'sidebar-nav-active';
+      var activePanelClassName = 'sidebar-panel-active';
+      if (item.hasClass(activeTabClassName)) {
+        return;
+      }
+
+      var currentTarget = $('.' + activePanelClassName);
+      var target = $('.' + item.data('target'));
+
+      hasVelocity ?
+        currentTarget.velocity('transition.slideUpOut', TAB_ANIMATE_DURATION, function () {
+          target
+            .velocity('stop')
+            .velocity('transition.slideDownIn', TAB_ANIMATE_DURATION)
+            .addClass(activePanelClassName);
+        }) :
+        currentTarget.animate({ opacity: 0 }, TAB_ANIMATE_DURATION, function () {
+          currentTarget.hide();
+          target
+            .stop()
+            .css({'opacity': 0, 'display': 'block'})
+            .animate({ opacity: 1 }, TAB_ANIMATE_DURATION, function () {
+              currentTarget.removeClass(activePanelClassName);
+              target.addClass(activePanelClassName);
+            });
+        });
+
+      item.siblings().removeClass(activeTabClassName);
+      item.addClass(activeTabClassName);
+    });
+
+    $('.post-toc a').on('click', function (e) {
+      e.preventDefault();
+      var targetSelector = NexT.utils.escapeSelector(this.getAttribute('href'));
+      var offset = $(targetSelector).offset().top;
+      hasVelocity ?
+        html.velocity('stop').velocity('scroll', {
+          offset: offset  + 'px',
+          mobileHA: false
+        }) :
+        $('html, body').stop().animate({
+          scrollTop: offset
+        }, 500);
+    });
+
+    // Expand sidebar on post detail page by default, when post has a toc.
+    NexT.motion.middleWares.sidebar = function () {
+      var $tocContent = $('.post-toc-content');
+
+      if (CONFIG.sidebar === 'post') {
+        if ($tocContent.length > 0 && $tocContent.html().trim().length > 0) {
+          NexT.utils.displaySidebar();
+        }
+      }
+    };
+  });
+</script>
+
+
 
   
 
