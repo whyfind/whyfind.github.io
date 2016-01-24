@@ -65,7 +65,7 @@
 <meta property="og:site_name" content="whyfind">
 <meta property="og:description" content="文采不好，这不是重点！1.第一个坑解决办法：1deploy 的 repository 要从 HTTPS值改成SSH值
 2.第二个坑错误信息是这样的：1234Please make sure you have the correct access rights and the repository exists.FATAL Something\&apos;s wrong. Maybe you can find">
-<meta property="og:updated_time" content="2016-01-24T13:08:19.449Z">
+<meta property="og:updated_time" content="2016-01-24T13:11:30.106Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="关于Hexo deploy操作踩过的坑">
 <meta name="twitter:description" content="文采不好，这不是重点！1.第一个坑解决办法：1deploy 的 repository 要从 HTTPS值改成SSH值
@@ -245,9 +245,9 @@
       
         <h3 id="u6587_u91C7_u4E0D_u597D_uFF0C_u8FD9_u4E0D_u662F_u91CD_u70B9_uFF01"><a href="#u6587_u91C7_u4E0D_u597D_uFF0C_u8FD9_u4E0D_u662F_u91CD_u70B9_uFF01" class="headerlink" title="文采不好，这不是重点！"></a>文采不好，这不是重点！</h3><h3 id="1-_u7B2C_u4E00_u4E2A_u5751"><a href="#1-_u7B2C_u4E00_u4E2A_u5751" class="headerlink" title="1.第一个坑"></a>1.第一个坑</h3><p>解决办法：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">deploy 的 repository 要从 HTTPS值改成SSH值</span><br></pre></td></tr></table></figure></p>
 <h3 id="2-_u7B2C_u4E8C_u4E2A_u5751"><a href="#2-_u7B2C_u4E8C_u4E2A_u5751" class="headerlink" title="2.第二个坑"></a>2.第二个坑</h3><p>错误信息是这样的：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Please make sure you have the correct access rights and the repository exists.</span><br><span class="line">FATAL Something\<span class="string">'s wrong. Maybe you can find the solution here: http://hexo.io/docs/troubleshooting.html</span><br><span class="line">Error: Permission denied (publickey).</span><br><span class="line">fatal: Could not read from remote repository.</span></span><br></pre></td></tr></table></figure></p>
-<p>解决办法:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt; $ <span class="built_in">eval</span> <span class="string">"<span class="variable">$(ssh-agent -s)</span>"</span></span><br><span class="line">&gt; $ ssh-add</span><br></pre></td></tr></table></figure></p>
-<h3 id="3-_u7B2C_u4E09_u4E2A_u5751"><a href="#3-_u7B2C_u4E09_u4E2A_u5751" class="headerlink" title="3.第三个坑"></a>3.第三个坑</h3><p>错误信息是这样的：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt; git branch 出错</span><br></pre></td></tr></table></figure></p>
-<p>解决办法:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt; git init</span><br></pre></td></tr></table></figure></p>
+<p>解决办法:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">eval</span> <span class="string">"<span class="variable">$(ssh-agent -s)</span>"</span></span><br><span class="line">$ ssh-add</span><br></pre></td></tr></table></figure></p>
+<h3 id="3-_u7B2C_u4E09_u4E2A_u5751"><a href="#3-_u7B2C_u4E09_u4E2A_u5751" class="headerlink" title="3.第三个坑"></a>3.第三个坑</h3><p>错误信息是这样的：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git branch 出错</span><br></pre></td></tr></table></figure></p>
+<p>解决办法:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git init</span><br></pre></td></tr></table></figure></p>
 <h3 id="4-_u7B2C_u56DB_u4E2A_u5751"><a href="#4-_u7B2C_u56DB_u4E2A_u5751" class="headerlink" title="4.第四个坑"></a>4.第四个坑</h3><p>错误信息是这样的：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ git push origin hexo</span><br><span class="line">fatal: <span class="string">'origin'</span> does not appear to be a git repository</span><br><span class="line">fatal: Could not <span class="built_in">read</span> from remote repository.</span><br></pre></td></tr></table></figure></p>
 <p>解决办法：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git remote add origin https://github.com/whyfind/whyfind.github.io.git</span><br></pre></td></tr></table></figure></p>
 
@@ -261,13 +261,13 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/01/24/hello-world/" rel="next" title="Hello World">
-                <i class="fa fa-chevron-left"></i> Hello World
-              </a>
-            
           </div>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/01/24/如何创建Hexo 博客？/" rel="prev" title="如何创建Hexo 博客？">
+                如何创建Hexo 博客？ <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
