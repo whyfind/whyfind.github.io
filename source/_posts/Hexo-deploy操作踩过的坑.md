@@ -1,5 +1,5 @@
 ---
-title: 关于Hexo deploy操作踩过的坑
+title: Hexo deploy操作踩过的坑
 date: 2016-01-24 20:05:33
 ---
 ### 2016的第一个开始。
