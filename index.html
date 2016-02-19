@@ -210,6 +210,122 @@
             
               
                 
+                <a class="post-title-link" href="/2016/02/19/web前端题/" itemprop="url">
+                  web前端题目---面试者的福利
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-02-19T22:14:33+08:00" content="2016-02-19">
+              2016-02-19
+            </time>
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h5 id="1-js_u6709_u54EA_u4E9B_u6570_u636E_u7C7B_u578B_u5462_uFF1F"><a href="#1-js_u6709_u54EA_u4E9B_u6570_u636E_u7C7B_u578B_u5462_uFF1F" class="headerlink" title="1.js有哪些数据类型呢？"></a>1.js有哪些数据类型呢？</h5><p>答：[String, Number, Undefined, Boolean, Null, Object, Function, Array]</p>
+<h5 id="2-_u8FD9_u4E9B_u6570_u636E_u7C7B_u578B_uFF0C_u54EA_u4E9B_u662F_u5F15_u7528_u7C7B_u578B_u7684_u5462_uFF1F"><a href="#2-_u8FD9_u4E9B_u6570_u636E_u7C7B_u578B_uFF0C_u54EA_u4E9B_u662F_u5F15_u7528_u7C7B_u578B_u7684_u5462_uFF1F" class="headerlink" title="2.这些数据类型，哪些是引用类型的呢？"></a>2.这些数据类型，哪些是引用类型的呢？</h5><p>答：[Object, Function, Array]</p>
+<h5 id="3-_u8BF4_u8BF4_u51FD_u6570_u8868_u8FBE_u5F0F_u548C_u51FD_u6570_u58F0_u660E_u7684_u533A_u522B_uFF1F"><a href="#3-_u8BF4_u8BF4_u51FD_u6570_u8868_u8FBE_u5F0F_u548C_u51FD_u6570_u58F0_u660E_u7684_u533A_u522B_uFF1F" class="headerlink" title="3.说说函数表达式和函数声明的区别？"></a>3.说说函数表达式和函数声明的区别？</h5><p>函数表达式：var func = function () {}</p>
+<p>函数声明： function func () {}</p>
+<p>两者的区别：当使用函数声明的形式来定义函数时，可以在声明之前被调用。函数表达式的形式来定义函数则不可以。会报错的。</p>
+<h5 id="4-_u95ED_u5305_u662F_u4EC0_u4E48_uFF1F_u4F18_u7F3A_u70B9_uFF1F"><a href="#4-_u95ED_u5305_u662F_u4EC0_u4E48_uFF1F_u4F18_u7F3A_u70B9_uFF1F" class="headerlink" title="4.闭包是什么？优缺点？"></a>4.闭包是什么？优缺点？</h5><p>闭包的实质是一个函数，是一个用于返回局部变量值的函数，因为在全局中，受JavaScript链式作用域结构的影响，父级变量中无法访问到子级的变量值，为了解决这个问题，才使用闭包这个概念。由于闭包时，变量的值都保存到内存中，会导致页面加载时内存消耗很大，IE会导致内在泄露，因此尽量少用或用时要及时删除变量。</p>
+<h5 id="5-splice_28_29_u7684_u7528_u6CD5"><a href="#5-splice_28_29_u7684_u7528_u6CD5" class="headerlink" title="5.splice()的用法"></a>5.splice()的用法</h5><p>index:起始位置；<br>howmany：要删除的长度；<br>item1,…,itemX:添加的项；<br>splice(index,howmany,item1,…,itemX)</p>
+<pre><code>var a =[1,2,3]; 
+a.splice(1,1,2,3,4); 
+console.log(a);//[1, 2, 3, 4, 3]
+</code></pre><h5 id="6-_u89E3_u91CA_u4E0B_u6D6E_u52A8_u548C_u5B83_u7684_u5DE5_u4F5C_u539F_u7406_uFF1F_u6E05_u9664_u6D6E_u52A8_u7684_u6280_u5DE7_uFF1F"><a href="#6-_u89E3_u91CA_u4E0B_u6D6E_u52A8_u548C_u5B83_u7684_u5DE5_u4F5C_u539F_u7406_uFF1F_u6E05_u9664_u6D6E_u52A8_u7684_u6280_u5DE7_uFF1F" class="headerlink" title="6.解释下浮动和它的工作原理？清除浮动的技巧？"></a>6.解释下浮动和它的工作原理？清除浮动的技巧？</h5><p>浮动元素脱离文档流，不占据空间。浮动元素碰到包含它的边框或者浮动元素的边框停留。</p>
+<ol>
+<li>使用空标签清除浮动。这种方法是在所有浮动标签后面添加一个空标签 定义css clear:both. 弊端就是增加了无意义标签。</li>
+<li>使用overflow。给包含浮动元素的父标签添加css属性 overflow:auto; zoom:1; zoom:1用于兼容IE6。</li>
+<li>使用after伪对象清除浮动。该方法只适用于非IE浏览器。具体写法可参照以下示例。使用中需注意以下几点。一、该方法中必须为需要清除浮动元素的伪对象中设置 height:0，否则该元素会比实际高出若干像素；</li>
+</ol>
+<h5 id="7-_u8BE6_u7EC6_u89E3_u91CAajax_u7684_u5DE5_u4F5C_u539F_u7406_uFF1F"><a href="#7-_u8BE6_u7EC6_u89E3_u91CAajax_u7684_u5DE5_u4F5C_u539F_u7406_uFF1F" class="headerlink" title="7.详细解释ajax的工作原理？"></a>7.详细解释ajax的工作原理？</h5><ol>
+<li>创建ajax对象(XmlHttpRwquest/ActiveXObject(Microsoft.XMLHttp))</li>
+<li>判断数据传输方式(get/post)</li>
+<li>打开链接open()</li>
+<li>发送send()</li>
+</ol>
+<p>当ajax完成第四步(onreadystatechange)数据接收完成，判断http响应状态，如果为200-300之间或者304(缓存)，执行回掉函数</p>
+<h5 id="8-innerHTML_uFF0CinnerText_u548CouterHTML_uFF0CouterText_u7684_u533A_u522B_uFF1F"><a href="#8-innerHTML_uFF0CinnerText_u548CouterHTML_uFF0CouterText_u7684_u533A_u522B_uFF1F" class="headerlink" title="8.innerHTML，innerText和outerHTML，outerText的区别？"></a>8.innerHTML，innerText和outerHTML，outerText的区别？</h5><p>举个例子来说吧。</p>
+<pre><code>&lt;div&gt;&lt;span&gt;内容&lt;/span&gt;&lt;/div&gt;
+</code></pre><p>使用这几个来获取上面div的内容的话，区别如下：</p>
+<pre><code>innerHTML:&quot;&lt;span&gt;内容&lt;/span&gt;&quot;,带有html标签
+
+innerText:&quot;内容&quot;,不带html标签
+
+outerHTML:&quot;&lt;div&gt;&lt;span&gt;内容&lt;/span&gt;&lt;/div&gt;&quot;
+
+outerText:获取元素跟innterText是一样的。
+</code></pre>
+          
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2016/02/17/apply-call-bind的用法以及它们的区别/" itemprop="url">
                   apply-call-bind的用法以及他们的区别
                 </a>
@@ -501,7 +617,7 @@ f.bar(); //Hello, World!
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">2</span>
+              <span class="site-state-item-count">3</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
