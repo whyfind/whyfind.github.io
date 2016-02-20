@@ -292,7 +292,51 @@ innerText:&quot;内容&quot;,不带html标签
 outerHTML:&quot;&lt;div&gt;&lt;span&gt;内容&lt;/span&gt;&lt;/div&gt;&quot;
 
 outerText:获取元素跟innterText是一样的。
-</code></pre>
+</code></pre><h5 id="9-ajax_u7684get_u548Cpost_u6709_u4EC0_u4E48_u533A_u522B_uFF1F"><a href="#9-ajax_u7684get_u548Cpost_u6709_u4EC0_u4E48_u533A_u522B_uFF1F" class="headerlink" title="9.ajax的get和post有什么区别？"></a>9.ajax的get和post有什么区别？</h5><p>get类似url地址传值(xxx.asp?xxx=xxx&amp;xxx=xxx&amp;xxx=xxx)、、post就是用表单传值</p>
+<p>Get方式:<br>用get方式可传送简单数据，但大小一般限制在1KB下，数据追加到url中发送（http的header传送），也就是说，浏览器将各个表单字段元素及其数据按照URL参数的格式附加在请求行中的资源路径后面。另外最重要的一点是，它会被客户端的浏览器缓存起来，那么，别人就可以从浏览器的历史记录中，读取到此客户的数据，比如帐号和密码等。因此，在某些情况下，get方法会带来严重的安全性问题。 </p>
+<p>Post方式:<br>当使用POST方式时，浏览器把各表单字段元素及其数据作为HTTP消息的实体内容发送给Web服务器，而不是作为URL地址的参数进行传递，使用POST方式传递的数据量要比使用GET方式传送的数据量大的多。 总之，GET方式传送数据量小，处理效率高，安全性低，会被缓存，而POST反之。 </p>
+<p>使用get方式需要注意：</p>
+<ol>
+<li>对于get请求（或凡涉及到url传递参数的），被传递的参数都要先经encodeURIComponent方法处理.例：var url = “update.php?name=” +encodeURIComponent(name) + “&amp;content=” +encodeURIComponent(content);</li>
+</ol>
+<p>使用Post方式需注意：</p>
+<ol>
+<li>设置header的Context-Type为application/x-www-form-urlencode确保服务器知道实体中有参数变量.通常使用XmlHttpRequest对象的SetRequestHeader(“Context-Type”,”application/x-www-form-urlencoded;”)。例：xmlHttp.setRequestHeader(“Content-Type”,”application/x-www-form-urlencoded”);</li>
+<li>参数是名/值一一对应的键值对,每对值用&amp;号隔开.如 var name=abc&amp;sex=man&amp;age=18，注意var name=update.php?abc&amp;sex=man&amp;age=18以及var name=?abc&amp;sex=man&amp;age=18的写法都是错误的;</li>
+<li>参数在Send(参数)方法中发送,例： xmlHttp.send(name); 如果是get方式，直接 xmlHttp.send(null);</li>
+<li>服务器端请求参数区分Get与Post。如果是get方式则$username = $_GET[“username”]; 如果是post方式，则$username = $_POST[“username”];</li>
+</ol>
+<h5 id="10-_u4F5C_u7528_u57DF_u94FE_uFF0C_uFF0C_u561B_u73A9_u610F_uFF1F"><a href="#10-_u4F5C_u7528_u57DF_u94FE_uFF0C_uFF0C_u561B_u73A9_u610F_uFF1F" class="headerlink" title="10.作用域链，，嘛玩意？"></a>10.作用域链，，嘛玩意？</h5><h5 id="11-CSS3_u6709_u54EA_u4E9B_u65B0_u7279_u6027_uFF1F"><a href="#11-CSS3_u6709_u54EA_u4E9B_u65B0_u7279_u6027_uFF1F" class="headerlink" title="11.CSS3有哪些新特性？"></a>11.CSS3有哪些新特性？</h5><ol>
+<li>边框：border-radius，border-image，box-shadow</li>
+<li>背景：background-size，background-origin，background-clip</li>
+<li>文本：text-shadow，word-wrap</li>
+<li>字体：@font-face</li>
+<li>2D转换：transform</li>
+<li>3D转换：rotateX(),rotateY()</li>
+<li>过渡：transition</li>
+<li>动画：animation @keyframe</li>
+<li>多列：column-count，column-rule，column-gap</li>
+<li>盒子模型：box-sizing，resize，outline-offset</li>
+<li>透明度：rgba(255,255,255,0.8)</li>
+<li>渐变效果：gradient，，linear–线性渐变</li>
+<li>媒体查询：@media</li>
+<li>还有css3新增了一些选择器。就不一一列举了。</li>
+</ol>
+<h5 id="12-HTML5_u7684_u65B0_u7279_u6027_u6709_u54EA_u4E9B_uFF1F"><a href="#12-HTML5_u7684_u65B0_u7279_u6027_u6709_u54EA_u4E9B_uFF1F" class="headerlink" title="12.HTML5的新特性有哪些？"></a>12.HTML5的新特性有哪些？</h5><ol>
+<li>视频：video标签</li>
+<li>拖放：draggable=”true”</li>
+<li>画布：canvas标签</li>
+<li>SVG：指矢量伸缩图形，可以直接嵌入HTML页面</li>
+<li>地理定位：navigation.geolocation</li>
+<li>web存储：localStorage，sessionStorage </li>
+<li>应用缓存： Application  Cache Manifest</li>
+<li>Web Worker：当在 HTML 页面中执行脚本时，页面的状态是不可响应的，直到脚本已完成。<br>web worker 是运行在后台的 JavaScript，独立于其他脚本，不会影响页面的性能。您可以继续做任何愿意做的事情：点击、选取内容等等，而此时 web worker 在后台运行。</li>
+<li>服务器发送事件：Server-Sent 事件–单向消息传递。Server-Sent 事件指的是网页自动获取来自服务器的更新。</li>
+<li>表单：(1.Input类型：email、url、number、range、Date pickers、search、color)—&gt;(2.表单元素：datalist、keygen、output)—&gt;(3.表单属性：autocomplete、autofocus、form、min, max 和 step、multiple、pattern、placeholder、required)</li>
+<li>html5新增标签：article、header、footer、section、source 等等。</li>
+</ol>
+<p>ps：持续增加中。。</p>
+
           
         
       
