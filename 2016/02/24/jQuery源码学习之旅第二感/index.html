@@ -57,16 +57,22 @@
 
 
 
-<meta name="description" content="2016的第一个开始。1.第一个坑错误信息是这样的：12345678910111213bash: /dev/tty: No such device or addresserror: failed to execute prompt script (exit code 1)fatal: could not read Username for &apos;https://github.com&apos;: No erro">
+<meta name="description" content="纵观之下，会发现里面大量充斥着，jQuery.extend和jQuery.fn.extend;稍微了解jQuery的人都知道，jQuery.extend()和jQuery.fn.extend()是由jQuery为开发插件提供的两个方法。那么现在来看看这两个方法的源码是怎么样实现的、、、
+jQuery.extend = jQuery.fn.extend = function() {
+    var">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hexo deploy操作踩过的坑">
-<meta property="og:url" content="http://yoursite.com/2016/01/24/Hexo-deploy操作踩过的坑/index.html">
+<meta property="og:title" content="jQuery源码学习之旅第二感">
+<meta property="og:url" content="http://yoursite.com/2016/02/24/jQuery源码学习之旅第二感/index.html">
 <meta property="og:site_name" content="whyfind">
-<meta property="og:description" content="2016的第一个开始。1.第一个坑错误信息是这样的：12345678910111213bash: /dev/tty: No such device or addresserror: failed to execute prompt script (exit code 1)fatal: could not read Username for &apos;https://github.com&apos;: No erro">
-<meta property="og:updated_time" content="2016-02-23T10:32:21.594Z">
+<meta property="og:description" content="纵观之下，会发现里面大量充斥着，jQuery.extend和jQuery.fn.extend;稍微了解jQuery的人都知道，jQuery.extend()和jQuery.fn.extend()是由jQuery为开发插件提供的两个方法。那么现在来看看这两个方法的源码是怎么样实现的、、、
+jQuery.extend = jQuery.fn.extend = function() {
+    var">
+<meta property="og:updated_time" content="2016-02-24T14:49:15.468Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo deploy操作踩过的坑">
-<meta name="twitter:description" content="2016的第一个开始。1.第一个坑错误信息是这样的：12345678910111213bash: /dev/tty: No such device or addresserror: failed to execute prompt script (exit code 1)fatal: could not read Username for &apos;https://github.com&apos;: No erro">
+<meta name="twitter:title" content="jQuery源码学习之旅第二感">
+<meta name="twitter:description" content="纵观之下，会发现里面大量充斥着，jQuery.extend和jQuery.fn.extend;稍微了解jQuery的人都知道，jQuery.extend()和jQuery.fn.extend()是由jQuery为开发插件提供的两个方法。那么现在来看看这两个方法的源码是怎么样实现的、、、
+jQuery.extend = jQuery.fn.extend = function() {
+    var">
 
 
 
@@ -84,7 +90,7 @@
   };
 </script>
 
-  <title> Hexo deploy操作踩过的坑 | whyfind </title>
+  <title> jQuery源码学习之旅第二感 | whyfind </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -202,7 +208,7 @@
             
             
               
-                Hexo deploy操作踩过的坑
+                jQuery源码学习之旅第二感
               
             
           </h1>
@@ -214,8 +220,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-01-24T20:05:33+08:00" content="2016-01-24">
-              2016-01-24
+            <time itemprop="dateCreated" datetime="2016-02-24T22:01:33+08:00" content="2016-02-24">
+              2016-02-24
             </time>
           </span>
 
@@ -225,8 +231,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/01/24/Hexo-deploy操作踩过的坑/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/01/24/Hexo-deploy操作踩过的坑/" itemprop="commentsCount"></span>
+                <a href="/2016/02/24/jQuery源码学习之旅第二感/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/02/24/jQuery源码学习之旅第二感/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -247,15 +253,74 @@
       
 
       
-        <h3 id="2016_u7684_u7B2C_u4E00_u4E2A_u5F00_u59CB_u3002"><a href="#2016_u7684_u7B2C_u4E00_u4E2A_u5F00_u59CB_u3002" class="headerlink" title="2016的第一个开始。"></a>2016的第一个开始。</h3><h3 id="1-_u7B2C_u4E00_u4E2A_u5751"><a href="#1-_u7B2C_u4E00_u4E2A_u5751" class="headerlink" title="1.第一个坑"></a>1.第一个坑</h3><p>错误信息是这样的：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">bash: /dev/tty: No such device or address</span><br><span class="line">error: failed to execute prompt script (<span class="built_in">exit</span> code <span class="number">1</span>)</span><br><span class="line">fatal: could not <span class="built_in">read</span> Username <span class="keyword">for</span> <span class="string">'https://github.com'</span>: No error</span><br><span class="line">FATAL Something<span class="string">'s wrong. Maybe you can find the solution here: http://hexo.io/docs/troubleshooting.html</span><br><span class="line">Error: bash: /dev/tty: No such device or address</span><br><span class="line">error: failed to execute prompt script (exit code 1)</span><br><span class="line">fatal: could not read Username for '</span>https://github.com\<span class="string">': No error</span><br><span class="line"></span><br><span class="line">at ChildProcess.&lt;anonymous&gt; (E:\zan\www\gitpages\hexo\zanjs.github.io\node_modules\hexo-deployer-git\node_modules\hexo-util\lib\spawn.js:42:17)</span><br><span class="line">at emitTwo (events.js:87:13)</span><br><span class="line">at ChildProcess.emit (events.js:172:7)</span><br><span class="line">at maybeClose (internal/child_process.js:818:16)</span><br><span class="line">at Process.ChildProcess._handle.onexit (internal/child_process.js:211:5)</span></span><br></pre></td></tr></table></figure></p>
-<p>解决办法：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">deploy 配置的 repository 要从</span><br><span class="line">HTTPS值(https://github.com/username/username.github.io.git)</span><br><span class="line">改成SSH值(git@github.com:username/username.github.io.git)</span><br></pre></td></tr></table></figure></p>
-<a id="more"></a>
-<h3 id="2-_u7B2C_u4E8C_u4E2A_u5751"><a href="#2-_u7B2C_u4E8C_u4E2A_u5751" class="headerlink" title="2.第二个坑"></a>2.第二个坑</h3><p>错误信息是这样的：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Please make sure you have the correct access rights and the repository exists.</span><br><span class="line">FATAL Something\<span class="string">'s wrong. Maybe you can find the solution here: http://hexo.io/docs/troubleshooting.html</span><br><span class="line">Error: Permission denied (publickey).</span><br><span class="line">fatal: Could not read from remote repository.</span></span><br></pre></td></tr></table></figure></p>
-<p>解决办法:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">eval</span> <span class="string">"<span class="variable">$(ssh-agent -s)</span>"</span></span><br><span class="line">$ ssh-add</span><br></pre></td></tr></table></figure></p>
-<h3 id="3-_u7B2C_u4E09_u4E2A_u5751"><a href="#3-_u7B2C_u4E09_u4E2A_u5751" class="headerlink" title="3.第三个坑"></a>3.第三个坑</h3><p>错误信息是这样的：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git branch 出错</span><br></pre></td></tr></table></figure></p>
-<p>解决办法:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git init</span><br></pre></td></tr></table></figure></p>
-<h3 id="4-_u7B2C_u56DB_u4E2A_u5751"><a href="#4-_u7B2C_u56DB_u4E2A_u5751" class="headerlink" title="4.第四个坑"></a>4.第四个坑</h3><p>错误信息是这样的：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ git push origin hexo</span><br><span class="line">fatal: <span class="string">'origin'</span> does not appear to be a git repository</span><br><span class="line">fatal: Could not <span class="built_in">read</span> from remote repository.</span><br></pre></td></tr></table></figure></p>
-<p>解决办法：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git remote add origin https://github.com/username/username.github.io.git</span><br></pre></td></tr></table></figure></p>
+        <p>纵观之下，会发现里面大量充斥着，jQuery.extend和jQuery.fn.extend;稍微了解jQuery的人都知道，jQuery.extend()和jQuery.fn.extend()是由jQuery为开发插件提供的两个方法。那么现在来看看这两个方法的源码是怎么样实现的、、、</p>
+<pre><code>jQuery.extend = jQuery.fn.extend = function() {
+    var options, name, src, copy, copyIsArray, clone,
+        target = arguments[ 0 ] || {},
+        i = 1,
+        length = arguments.length,
+        deep = false;
+
+    // 当你传入的第一个值是布尔值，且这个值为true的时候，会进行深拷贝。
+    // 同时把第二个值赋给target对象。
+    if ( typeof target === &quot;boolean&quot; ) {
+        deep = target;
+        target = arguments[ i ] || {};
+        i++;
+    }
+
+    // 这个是当要进行拷贝的target对象，不是对象或者函数。则初始化为空对象
+    if ( typeof target !== &quot;object&quot; &amp;&amp; !jQuery.isFunction( target ) ) {
+        target = {};
+    }
+
+    // 当只有一个参数时，则指定jQuery自身作为目标对象
+    if ( i === length ) {
+        target = this;
+        i--;
+    }
+
+    for ( ; i &lt; length; i++ ) {
+
+        // 参数值不能为null/undefined
+        if ( ( options = arguments[ i ] ) != null ) {
+
+            // Extend the base object
+            for ( name in options ) {
+                src = target[ name ];
+                copy = options[ name ];
+
+                // 阻止无限循环
+                if ( target === copy ) {
+                    continue;
+                }
+
+                //如果对象中包含了数组或者其他对象，则利用递归进行拷贝
+                if ( deep &amp;&amp; copy &amp;&amp; ( jQuery.isPlainObject( copy ) ||
+                    ( copyIsArray = jQuery.isArray( copy ) ) ) ) {
+
+                    if ( copyIsArray ) {
+                        copyIsArray = false;
+                        clone = src &amp;&amp; jQuery.isArray( src ) ? src : [];
+
+                    } else {
+                        clone = src &amp;&amp; jQuery.isPlainObject( src ) ? src : {};
+                    }
+
+                    // Never move original objects, clone them
+                    target[ name ] = jQuery.extend( deep, clone, copy );
+
+                // 不拷贝undefined值
+                } else if ( copy !== undefined ) {
+                    target[ name ] = copy;
+                }
+            }
+        }
+    }
+    // 返回已经被修改的对象
+    return target;
+};
+</code></pre><p>通过这两个方法，jQuery完成了自身很多方法的扩展。</p>
 
       
     </div>
@@ -267,13 +332,13 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2016/02/22/jQuery源码学习之旅第一天/" rel="next" title="jQuery源码学习之旅第一感">
+                <i class="fa fa-chevron-left"></i> jQuery源码学习之旅第一感
+              </a>
+            
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/02/17/apply-call-bind的用法以及它们的区别/" rel="prev" title="apply-call-bind的用法以及他们的区别">
-                apply-call-bind的用法以及他们的区别 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -299,8 +364,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/01/24/Hexo-deploy操作踩过的坑/"
-           data-title="Hexo deploy操作踩过的坑" data-url="http://yoursite.com/2016/01/24/Hexo-deploy操作踩过的坑/">
+      <div class="ds-thread" data-thread-key="2016/02/24/jQuery源码学习之旅第二感/"
+           data-title="jQuery源码学习之旅第二感" data-url="http://yoursite.com/2016/02/24/jQuery源码学习之旅第二感/">
       </div>
     
   </div>
@@ -417,7 +482,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#2016_u7684_u7B2C_u4E00_u4E2A_u5F00_u59CB_u3002"><span class="nav-number">1.</span> <span class="nav-text">2016的第一个开始。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-_u7B2C_u4E00_u4E2A_u5751"><span class="nav-number">2.</span> <span class="nav-text">1.第一个坑</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-_u7B2C_u4E8C_u4E2A_u5751"><span class="nav-number">3.</span> <span class="nav-text">2.第二个坑</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-_u7B2C_u4E09_u4E2A_u5751"><span class="nav-number">4.</span> <span class="nav-text">3.第三个坑</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-_u7B2C_u56DB_u4E2A_u5751"><span class="nav-number">5.</span> <span class="nav-text">4.第四个坑</span></a></li></ol></div>
+              <p class="post-toc-empty">此文章未包含目录</p>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator">

@@ -187,6 +187,173 @@
 
     
     
+      
+      
+        
+        
+        
+      
+
+      
+    
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/02/24/jQuery源码学习之旅第二感/" itemprop="url">
+                  jQuery源码学习之旅第二感
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-02-24T22:01:33+08:00" content="2016-02-24">
+              2016-02-24
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/02/24/jQuery源码学习之旅第二感/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/02/24/jQuery源码学习之旅第二感/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>纵观之下，会发现里面大量充斥着，jQuery.extend和jQuery.fn.extend;稍微了解jQuery的人都知道，jQuery.extend()和jQuery.fn.extend()是由jQuery为开发插件提供的两个方法。那么现在来看看这两个方法的源码是怎么样实现的、、、</p>
+<pre><code>jQuery.extend = jQuery.fn.extend = function() {
+    var options, name, src, copy, copyIsArray, clone,
+        target = arguments[ 0 ] || {},
+        i = 1,
+        length = arguments.length,
+        deep = false;
+
+    // 当你传入的第一个值是布尔值，且这个值为true的时候，会进行深拷贝。
+    // 同时把第二个值赋给target对象。
+    if ( typeof target === &quot;boolean&quot; ) {
+        deep = target;
+        target = arguments[ i ] || {};
+        i++;
+    }
+
+    // 这个是当要进行拷贝的target对象，不是对象或者函数。则初始化为空对象
+    if ( typeof target !== &quot;object&quot; &amp;&amp; !jQuery.isFunction( target ) ) {
+        target = {};
+    }
+
+    // 当只有一个参数时，则指定jQuery自身作为目标对象
+    if ( i === length ) {
+        target = this;
+        i--;
+    }
+
+    for ( ; i &lt; length; i++ ) {
+
+        // 参数值不能为null/undefined
+        if ( ( options = arguments[ i ] ) != null ) {
+
+            // Extend the base object
+            for ( name in options ) {
+                src = target[ name ];
+                copy = options[ name ];
+
+                // 阻止无限循环
+                if ( target === copy ) {
+                    continue;
+                }
+
+                //如果对象中包含了数组或者其他对象，则利用递归进行拷贝
+                if ( deep &amp;&amp; copy &amp;&amp; ( jQuery.isPlainObject( copy ) ||
+                    ( copyIsArray = jQuery.isArray( copy ) ) ) ) {
+
+                    if ( copyIsArray ) {
+                        copyIsArray = false;
+                        clone = src &amp;&amp; jQuery.isArray( src ) ? src : [];
+
+                    } else {
+                        clone = src &amp;&amp; jQuery.isPlainObject( src ) ? src : {};
+                    }
+
+                    // Never move original objects, clone them
+                    target[ name ] = jQuery.extend( deep, clone, copy );
+
+                // 不拷贝undefined值
+                } else if ( copy !== undefined ) {
+                    target[ name ] = copy;
+                }
+            }
+        }
+    }
+    // 返回已经被修改的对象
+    return target;
+};
+</code></pre><p>通过这两个方法，jQuery完成了自身很多方法的扩展。</p>
+
+          
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
 
     
       
@@ -211,7 +378,7 @@
               
                 
                 <a class="post-title-link" href="/2016/02/22/jQuery源码学习之旅第一天/" itemprop="url">
-                  jQuery源码学习之旅第一天
+                  jQuery源码学习之旅第一感
                 </a>
               
             
@@ -629,7 +796,7 @@ one.print.apply(two); //时间很快~今年是2016年了。
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">4</span>
+              <span class="site-state-item-count">5</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
