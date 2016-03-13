@@ -69,7 +69,7 @@
     options = typeof options === &amp;quot;string&amp;quot; ?
         createOptions( options ) :
         jQuery.extend( {}, options );">
-<meta property="og:updated_time" content="2016-03-13T07:40:54.477Z">
+<meta property="og:updated_time" content="2016-03-13T08:08:14.264Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="jQuery.Callbacks的理解">
 <meta name="twitter:description" content="一、先看看jQuery.Callbacks()的基本结构jQuery.Callbacks = function( options ) {
@@ -296,7 +296,8 @@
 
     return self; //返回self对象
 }
-</code></pre><h4 id="u4E8C_u3001_u5176_u4E2D_u7684_u5177_u4F53_u7684_u6E90_u4EE3_u7801"><a href="#u4E8C_u3001_u5176_u4E2D_u7684_u5177_u4F53_u7684_u6E90_u4EE3_u7801" class="headerlink" title="二、其中的具体的源代码"></a>二、其中的具体的源代码</h4><pre><code>var rnotwhite = ( /\S+/g );
+</code></pre><a id="more"></a>
+<h4 id="u4E8C_u3001_u5176_u4E2D_u7684_u5177_u4F53_u7684_u6E90_u4EE3_u7801"><a href="#u4E8C_u3001_u5176_u4E2D_u7684_u5177_u4F53_u7684_u6E90_u4EE3_u7801" class="headerlink" title="二、其中的具体的源代码"></a>二、其中的具体的源代码</h4><pre><code>var rnotwhite = ( /\S+/g );
 
 function createOptions( options ) {
     var object = {};
