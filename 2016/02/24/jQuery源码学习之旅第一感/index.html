@@ -57,22 +57,37 @@
 
 
 
-<meta name="description" content="纵观之下，会发现里面大量充斥着，jQuery.extend和jQuery.fn.extend;稍微了解jQuery的人都知道，jQuery.extend()和jQuery.fn.extend()是由jQuery为开发插件提供的两个方法。那么现在来看看这两个方法的源码是怎么样实现的、、、
-jQuery.extend = jQuery.fn.extend = function() {
-    var">
+<meta name="description" content="jQuery2.0版本实现了以下：
+不兼容IE6/7/8
+体积缩小了大约10%
+可自定义包含的功能模块
+兼容jQuery1.9版本的API
+
+下面、我就开始了自己的jQuery源码之旅：
+纵观之下，会发现里面大量充斥着，jQuery.extend和jQuery.fn.extend;稍微了解jQuery的人都知道，jQuery.extend()和jQuery.fn.extend()是由jQuery为">
 <meta property="og:type" content="article">
-<meta property="og:title" content="jQuery源码学习之旅第二感">
-<meta property="og:url" content="http://yoursite.com/2016/02/24/jQuery源码学习之旅第二感/index.html">
+<meta property="og:title" content="jQuery源码学习之旅第一感">
+<meta property="og:url" content="http://yoursite.com/2016/02/24/jQuery源码学习之旅第一感/index.html">
 <meta property="og:site_name" content="whyfind">
-<meta property="og:description" content="纵观之下，会发现里面大量充斥着，jQuery.extend和jQuery.fn.extend;稍微了解jQuery的人都知道，jQuery.extend()和jQuery.fn.extend()是由jQuery为开发插件提供的两个方法。那么现在来看看这两个方法的源码是怎么样实现的、、、
-jQuery.extend = jQuery.fn.extend = function() {
-    var">
-<meta property="og:updated_time" content="2016-02-24T14:54:12.758Z">
+<meta property="og:description" content="jQuery2.0版本实现了以下：
+不兼容IE6/7/8
+体积缩小了大约10%
+可自定义包含的功能模块
+兼容jQuery1.9版本的API
+
+下面、我就开始了自己的jQuery源码之旅：
+纵观之下，会发现里面大量充斥着，jQuery.extend和jQuery.fn.extend;稍微了解jQuery的人都知道，jQuery.extend()和jQuery.fn.extend()是由jQuery为">
+<meta property="og:updated_time" content="2016-03-13T08:01:46.244Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="jQuery源码学习之旅第二感">
-<meta name="twitter:description" content="纵观之下，会发现里面大量充斥着，jQuery.extend和jQuery.fn.extend;稍微了解jQuery的人都知道，jQuery.extend()和jQuery.fn.extend()是由jQuery为开发插件提供的两个方法。那么现在来看看这两个方法的源码是怎么样实现的、、、
-jQuery.extend = jQuery.fn.extend = function() {
-    var">
+<meta name="twitter:title" content="jQuery源码学习之旅第一感">
+<meta name="twitter:description" content="jQuery2.0版本实现了以下：
+不兼容IE6/7/8
+体积缩小了大约10%
+可自定义包含的功能模块
+兼容jQuery1.9版本的API
+
+下面、我就开始了自己的jQuery源码之旅：
+纵观之下，会发现里面大量充斥着，jQuery.extend和jQuery.fn.extend;稍微了解jQuery的人都知道，jQuery.extend()和jQuery.fn.extend()是由jQuery为">
 
 
 
@@ -90,7 +105,7 @@ jQuery.extend = jQuery.fn.extend = function() {
   };
 </script>
 
-  <title> jQuery源码学习之旅第二感 | whyfind </title>
+  <title> jQuery源码学习之旅第一感 | whyfind </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -218,7 +233,7 @@ jQuery.extend = jQuery.fn.extend = function() {
             
             
               
-                jQuery源码学习之旅第二感
+                jQuery源码学习之旅第一感
               
             
           </h1>
@@ -241,8 +256,8 @@ jQuery.extend = jQuery.fn.extend = function() {
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/02/24/jQuery源码学习之旅第二感/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/02/24/jQuery源码学习之旅第二感/" itemprop="commentsCount"></span>
+                <a href="/2016/02/24/jQuery源码学习之旅第一感/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/02/24/jQuery源码学习之旅第一感/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -263,7 +278,14 @@ jQuery.extend = jQuery.fn.extend = function() {
       
 
       
-        <p>纵观之下，会发现里面大量充斥着，jQuery.extend和jQuery.fn.extend;稍微了解jQuery的人都知道，jQuery.extend()和jQuery.fn.extend()是由jQuery为开发插件提供的两个方法。那么现在来看看这两个方法的源码是怎么样实现的、、、</p>
+        <h4 id="jQuery2-0_u7248_u672C_u5B9E_u73B0_u4E86_u4EE5_u4E0B_uFF1A"><a href="#jQuery2-0_u7248_u672C_u5B9E_u73B0_u4E86_u4EE5_u4E0B_uFF1A" class="headerlink" title="jQuery2.0版本实现了以下："></a>jQuery2.0版本实现了以下：</h4><ol>
+<li>不兼容IE6/7/8</li>
+<li>体积缩小了大约10%</li>
+<li>可自定义包含的功能模块</li>
+<li>兼容jQuery1.9版本的API</li>
+</ol>
+<p>下面、我就开始了自己的jQuery源码之旅：</p>
+<p>纵观之下，会发现里面大量充斥着，jQuery.extend和jQuery.fn.extend;稍微了解jQuery的人都知道，jQuery.extend()和jQuery.fn.extend()是由jQuery为开发插件提供的两个方法。那么现在来看看这两个方法的源码是怎么样实现的、、、</p>
 <pre><code>jQuery.extend = jQuery.fn.extend = function() {
     var options, name, src, copy, copyIsArray, clone,
         target = arguments[ 0 ] || {},
@@ -342,13 +364,17 @@ jQuery.extend = jQuery.fn.extend = function() {
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/02/22/jQuery源码学习之旅第一天/" rel="next" title="jQuery源码学习之旅第一感">
-                <i class="fa fa-chevron-left"></i> jQuery源码学习之旅第一感
+              <a href="/2016/02/19/web前端题/" rel="next" title="web前端题目---面试者的福利">
+                <i class="fa fa-chevron-left"></i> web前端题目---面试者的福利
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/03/13/jQuery.Callbacks的理解/" rel="prev" title="jQuery.Callbacks的理解">
+                jQuery.Callbacks的理解 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -374,8 +400,8 @@ jQuery.extend = jQuery.fn.extend = function() {
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/02/24/jQuery源码学习之旅第二感/"
-           data-title="jQuery源码学习之旅第二感" data-url="http://yoursite.com/2016/02/24/jQuery源码学习之旅第二感/">
+      <div class="ds-thread" data-thread-key="2016/02/24/jQuery源码学习之旅第一感/"
+           data-title="jQuery源码学习之旅第一感" data-url="http://yoursite.com/2016/02/24/jQuery源码学习之旅第一感/">
       </div>
     
   </div>
@@ -492,7 +518,7 @@ jQuery.extend = jQuery.fn.extend = function() {
               
             
             
-              <p class="post-toc-empty">此文章未包含目录</p>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#jQuery2-0_u7248_u672C_u5B9E_u73B0_u4E86_u4EE5_u4E0B_uFF1A"><span class="nav-number">1.</span> <span class="nav-text">jQuery2.0版本实现了以下：</span></a></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator">
