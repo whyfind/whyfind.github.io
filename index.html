@@ -220,6 +220,103 @@
             
               
                 
+                <a class="post-title-link" href="/2016/03/27/WebTemplate/" itemprop="url">
+                  在这里介绍2种前端模板的用法(ejs和html imports)
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-03-27T19:41:33+08:00" content="2016-03-27">
+              2016-03-27
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/03/27/WebTemplate/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/03/27/WebTemplate/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p>前文：所谓前端模板即是，将页面上共同的顶部和底部抽离出来作为模板页，其他页面然后引用这个模板页。这样做的好处是，当页面头部或者尾部需要改动的时候，你只要修改模板页面就可以了。不用挨个页面修改那么费事。当然在有后台语言配合的情况下。后台就带有那种模板作用的，例如.NET的MVC下的以_layout.cshtml为模板，然后java方面jsp页面好像也是有的。但是作为前端不依赖后台的情况，也是需要模板的。so…不多说。直接介绍如何这2种都是如何使用的。</p>
+<h3 id="1_u3001ejs_u5B9E_u73B0"><a href="#1_u3001ejs_u5B9E_u73B0" class="headerlink" title="1、ejs实现"></a>1、ejs实现</h3><p>ejs是基于NodeJs平台下的比较主流的模板引擎。如何使用请看下面…</p>
+<h4 id="u2460-_u5B89_u88C5"><a href="#u2460-_u5B89_u88C5" class="headerlink" title="①.安装"></a>①.安装</h4><p> 啥也不说了既然是基于node的，首先你肯定得装了npm了。然后敲命令—</p>
+<pre><code>npm i ejs2html -g
+</code></pre><h4 id="u2461-_u4F7F_u7528"><a href="#u2461-_u4F7F_u7528" class="headerlink" title="②.使用"></a>②.使用</h4>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/03/27/WebTemplate/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2016/03/13/jQuery.Callbacks的理解/" itemprop="url">
                   jQuery.Callbacks的理解
                 </a>
@@ -653,7 +750,7 @@
 
       
         
-          <h3 id="u4E00_u3001call_u3001apply_u7528_u6CD5"><a href="#u4E00_u3001call_u3001apply_u7528_u6CD5" class="headerlink" title="一、call、apply用法"></a>一、call、apply用法</h3><h5 id="1-1_u3001For_Example"><a href="#1-1_u3001For_Example" class="headerlink" title="1.1、For Example"></a>1.1、For Example</h5><pre><code>var one = {
+          <h3 id="u4E00_u3001call_u3001apply_u7528_u6CD5"><a href="#u4E00_u3001call_u3001apply_u7528_u6CD5" class="headerlink" title="一、call、apply用法"></a>一、call、apply用法</h3><h4 id="1-1_u3001For_Example"><a href="#1-1_u3001For_Example" class="headerlink" title="1.1、For Example"></a>1.1、For Example</h4><pre><code>var one = {
       content : &quot;结束吧！&quot;,
       year : &quot;2015年是去年了。&quot;,
       print : function() {
@@ -830,7 +927,7 @@ one.print.apply(two); //时间很快~今年是2016年了。
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">5</span>
+              <span class="site-state-item-count">6</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
