@@ -65,12 +65,12 @@
 <meta property="og:site_name" content="whyfind">
 <meta property="og:description" content="前文：当一个需要div固定宽度和高度的时候，里面展示着一个图片，但是图片大小不定。那么这大小不定的图片，如何在这个div里面完美展现呢？我说的完美展示即是①图片不变形②且尽可能的展示图片③div里面不会留白。(ps:其实这是一个面试题目，但是当初呢，我不知道啊不知道啊。现在我知道了。我知道了。说两遍~~)
 第一种情况下展示失败首先呢，是先将图片展示的时候设置成div的背景图的形式展示。准备一张80">
-<meta property="og:image" content="http://http://whyfind.github.io/images/backgroundSW.png">
-<meta property="og:image" content="http://http://whyfind.github.io/images/backgroundSH.png">
+<meta property="og:image" content="http://whyfind.github.io/images/backgroundSW.png">
+<meta property="og:image" content="http://whyfind.github.io/images/backgroundSH.png">
 <meta property="og:image" content="http://whyfind.github.io/images/backgroundcover.png">
-<meta property="og:image" content="http://http://whyfind.github.io/images/background_clip.png">
-<meta property="og:image" content="http://http://whyfind.github.io/images/backgroundper.png">
-<meta property="og:updated_time" content="2016-04-09T14:12:18.546Z">
+<meta property="og:image" content="http://whyfind.github.io/images/background_clip.png">
+<meta property="og:image" content="http://whyfind.github.io/images/backgroundper.png">
+<meta property="og:updated_time" content="2016-04-09T14:22:51.542Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="一张图片如何在固定宽高的div里完美的展现？">
 <meta name="twitter:description" content="前文：当一个需要div固定宽度和高度的时候，里面展示着一个图片，但是图片大小不定。那么这大小不定的图片，如何在这个div里面完美展现呢？我说的完美展示即是①图片不变形②且尽可能的展示图片③div里面不会留白。(ps:其实这是一个面试题目，但是当初呢，我不知道啊不知道啊。现在我知道了。我知道了。说两遍~~)
@@ -273,11 +273,12 @@ height:300px;
 border:3px solid black;
 background:url(./images/b-800-600.jpg) no-repeat;
 background-size:auto 100%;
-</code></pre><p>效果：<br><img src="http://http://whyfind.github.io/images/backgroundSW.png" alt=""></p>
+</code></pre><p>效果：<br><img src="http://whyfind.github.io/images/backgroundSW.png" alt=""></p>
 <p>显然此时高度100%，宽度自适应时的等比例下，，宽度不够，则无法填充整个div。导致右边有留白。</p>
+<a id="more"></a>
 <h4 id="u7B2C_u4E8C_u79CD_u60C5_u51B5_u4E0B_u5C55_u793A_u5931_u8D25"><a href="#u7B2C_u4E8C_u79CD_u60C5_u51B5_u4E0B_u5C55_u793A_u5931_u8D25" class="headerlink" title="第二种情况下展示失败"></a>第二种情况下展示失败</h4><p>首先呢，是先将图片展示的时候设置成div的背景图的形式展示。准备一张800*600的图片</p>
 <h6 id="css"><a href="#css" class="headerlink" title="css"></a>css</h6><pre><code><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">width:300px;</span><br><span class="line">height:300px;</span><br><span class="line">border:3px solid black;</span><br><span class="line">background:url(./images/b-800-600.jpg) no-repeat;</span><br><span class="line">background-size:100% auto;</span><br></pre></td></tr></table></figure>
-</code></pre><p>效果：<br><img src="http://http://whyfind.github.io/images/backgroundSH.png" alt=""></p>
+</code></pre><p>效果：<br><img src="http://whyfind.github.io/images/backgroundSH.png" alt=""></p>
 <p>显然此时宽度100%，高度自适应时的等比例下，，高度不够，则无法填充整个div。导致下边有留白。</p>
 <h4 id="u7B2C_u4E09_u79CD_u60C5_u51B5_u4E0B_u5C55_u793A_u5931_u8D25"><a href="#u7B2C_u4E09_u79CD_u60C5_u51B5_u4E0B_u5C55_u793A_u5931_u8D25" class="headerlink" title="第三种情况下展示失败"></a>第三种情况下展示失败</h4><p>同样的如果在不是与图片宽高等比例的div里面，强行将div的</p>
 <pre><code>background-size:100% 100%;
@@ -293,12 +294,12 @@ background-size:auto 100%;
 <h4 id="u6269_u5C55background-clip_u5C5E_u6027"><a href="#u6269_u5C55background-clip_u5C5E_u6027" class="headerlink" title="扩展background-clip属性"></a>扩展background-clip属性</h4><p>background-clip: border-box|padding-box|content-box;<br>规定背景的绘制区域。</p>
 <p>经过测试，只有在值为border的时候，是意外的，</p>
 <h6 id="css-2"><a href="#css-2" class="headerlink" title="css"></a>css</h6><pre><code><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">width: 300px;</span><br><span class="line">   height: 250px;</span><br><span class="line">   border: 20px solid rgba(199, 28, 28, 0.3);</span><br><span class="line">   padding: 30px;</span><br><span class="line">   background: green url(./images/b-800-600.jpg) no-repeat;</span><br><span class="line">   background-size: cover;</span><br><span class="line">   background-position: center center;</span><br><span class="line">   background-clip: border-box;</span><br></pre></td></tr></table></figure>
-</code></pre><p>结果：<br><img src="http://http://whyfind.github.io/images/background_clip.png" alt=""></p>
+</code></pre><p>结果：<br><img src="http://whyfind.github.io/images/background_clip.png" alt=""></p>
 <p>看效果，意外的是，背景颜色确实是从border开始的，但是背景图片在border区域并没有绘制。</p>
 <h4 id="u6269_u5C55background-origin_u5C5E_u6027"><a href="#u6269_u5C55background-origin_u5C5E_u6027" class="headerlink" title="扩展background-origin属性"></a>扩展background-origin属性</h4><p>background-origin: border-box|padding-box|content-box;<br>规定背景图片的定位区域。</p>
 <h4 id="clip_u548Corigin_u7ED3_u5408_u4F7F_u7528_u5C31_u6B63_u5E38_u4E86_u3002"><a href="#clip_u548Corigin_u7ED3_u5408_u4F7F_u7528_u5C31_u6B63_u5E38_u4E86_u3002" class="headerlink" title="clip和origin结合使用就正常了。"></a>clip和origin结合使用就正常了。</h4><p>随便举个例子，具体的细节就不说明了，大家可以多测试一下：</p>
 <h6 id="css-3"><a href="#css-3" class="headerlink" title="css"></a>css</h6><pre><code><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">width: 300px;</span><br><span class="line">   height: 250px;</span><br><span class="line">   border: 20px solid rgba(199, 28, 28, 0.3);</span><br><span class="line">   padding: 30px;</span><br><span class="line">   background: green url(./images/b-800-600.jpg) no-repeat;</span><br><span class="line">   background-size: cover;</span><br><span class="line">   background-position: center center;</span><br><span class="line">   background-clip: border-box;</span><br><span class="line">background-origin: border-box；</span><br></pre></td></tr></table></figure>
-</code></pre><p>效果完美！！<br><img src="http://http://whyfind.github.io/images/backgroundper.png" alt=""></p>
+</code></pre><p>效果完美！！<br><img src="http://whyfind.github.io/images/backgroundper.png" alt=""></p>
 <p>具体的用法细节，在这里贴几个链接想仔细研究的可以看看。兴许有帮助。<br>①<a href="http://www.cnblogs.com/2050/archive/2012/11/13/2768289.html" title="background-clip与background-origin的用法" target="_blank" rel="external">http://www.cnblogs.com/2050/archive/2012/11/13/2768289.html</a><br>②<a href="http://www.tuicool.com/articles/V3Y7f2" title="背景剪裁Background-clip" target="_blank" rel="external">http://www.tuicool.com/articles/V3Y7f2</a></p>
 
       
