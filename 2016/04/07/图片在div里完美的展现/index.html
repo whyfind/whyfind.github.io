@@ -70,7 +70,7 @@
 <meta property="og:image" content="http://whyfind.github.io/images/backgroundcover.png">
 <meta property="og:image" content="http://whyfind.github.io/images/background_clip.png">
 <meta property="og:image" content="http://whyfind.github.io/images/backgroundper.png">
-<meta property="og:updated_time" content="2016-04-09T14:22:51.542Z">
+<meta property="og:updated_time" content="2016-04-09T14:35:36.537Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="一张图片如何在固定宽高的div里完美的展现？">
 <meta name="twitter:description" content="前文：当一个需要div固定宽度和高度的时候，里面展示着一个图片，但是图片大小不定。那么这大小不定的图片，如何在这个div里面完美展现呢？我说的完美展示即是①图片不变形②且尽可能的展示图片③div里面不会留白。(ps:其实这是一个面试题目，但是当初呢，我不知道啊不知道啊。现在我知道了。我知道了。说两遍~~)
@@ -267,7 +267,7 @@
       
         <p>前文：当一个需要div固定宽度和高度的时候，里面展示着一个图片，但是图片大小不定。那么这大小不定的图片，如何在这个div里面完美展现呢？我说的完美展示即是①图片不变形②且尽可能的展示图片③div里面不会留白。(ps:其实这是一个面试题目，但是当初呢，我不知道啊不知道啊。现在我知道了。我知道了。说两遍~~)</p>
 <h4 id="u7B2C_u4E00_u79CD_u60C5_u51B5_u4E0B_u5C55_u793A_u5931_u8D25"><a href="#u7B2C_u4E00_u79CD_u60C5_u51B5_u4E0B_u5C55_u793A_u5931_u8D25" class="headerlink" title="第一种情况下展示失败"></a>第一种情况下展示失败</h4><p>首先呢，是先将图片展示的时候设置成div的背景图的形式展示。准备一张800*600的图片</p>
-<p>div样式设置成：</p>
+<p>css：</p>
 <pre><code>width:300px;
 height:300px;
 border:3px solid black;
@@ -277,7 +277,12 @@ background-size:auto 100%;
 <p>显然此时高度100%，宽度自适应时的等比例下，，宽度不够，则无法填充整个div。导致右边有留白。</p>
 <a id="more"></a>
 <h4 id="u7B2C_u4E8C_u79CD_u60C5_u51B5_u4E0B_u5C55_u793A_u5931_u8D25"><a href="#u7B2C_u4E8C_u79CD_u60C5_u51B5_u4E0B_u5C55_u793A_u5931_u8D25" class="headerlink" title="第二种情况下展示失败"></a>第二种情况下展示失败</h4><p>首先呢，是先将图片展示的时候设置成div的背景图的形式展示。准备一张800*600的图片</p>
-<h6 id="css"><a href="#css" class="headerlink" title="css"></a>css</h6><pre><code><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">width:300px;</span><br><span class="line">height:300px;</span><br><span class="line">border:3px solid black;</span><br><span class="line">background:url(./images/b-800-600.jpg) no-repeat;</span><br><span class="line">background-size:100% auto;</span><br></pre></td></tr></table></figure>
+<p>css:</p>
+<pre><code>width:300px;
+height:300px;
+border:3px solid black;
+background:url(./images/b-800-600.jpg) no-repeat;
+background-size:100% auto;
 </code></pre><p>效果：<br><img src="http://whyfind.github.io/images/backgroundSH.png" alt=""></p>
 <p>显然此时宽度100%，高度自适应时的等比例下，，高度不够，则无法填充整个div。导致下边有留白。</p>
 <h4 id="u7B2C_u4E09_u79CD_u60C5_u51B5_u4E0B_u5C55_u793A_u5931_u8D25"><a href="#u7B2C_u4E09_u79CD_u60C5_u51B5_u4E0B_u5C55_u793A_u5931_u8D25" class="headerlink" title="第三种情况下展示失败"></a>第三种情况下展示失败</h4><p>同样的如果在不是与图片宽高等比例的div里面，强行将div的</p>
@@ -287,18 +292,41 @@ background-size:auto 100%;
 <h4 id="u5B8C_u7F8E_u5B9E_u73B0_u65B9_u5F0F_uFF1A"><a href="#u5B8C_u7F8E_u5B9E_u73B0_u65B9_u5F0F_uFF1A" class="headerlink" title="完美实现方式："></a>完美实现方式：</h4><p>其实API里面都写了。确实是我不够细心，到这会才发现。就是用background-size:cover;他所形成的效果是这么描述的：</p>
 <p><strong>把背景图像扩展至足够大，以使背景图像完全覆盖背景区域。背景图像的某些部分也许无法显示在背景定位区域中。</strong></p>
 <p>扩展至足够大，足够大，足够大，以使背景图像完全覆盖背景区域！这描述的效果基本上满足我想要的完美展现图片了。但是呢。导致的就是有部分会无法显示。但是没办法！！！</p>
-<h6 id="css-1"><a href="#css-1" class="headerlink" title="css"></a>css</h6><pre><code><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">width: 300px;</span><br><span class="line">   height: 250px;</span><br><span class="line">   border: 3px solid black;</span><br><span class="line">   background: url(./images/b-800-600.jpg) no-repeat;</span><br><span class="line">   background-size: cover;</span><br><span class="line">   background-position: center;</span><br></pre></td></tr></table></figure>
+<p>css:</p>
+<pre><code>width: 300px;
+height: 250px;
+border: 3px solid black;
+background: url(./images/b-800-600.jpg) no-repeat;
+background-size: cover;
+background-position: center;
 </code></pre><p>效果：<br><img src="http://whyfind.github.io/images/backgroundcover.png" alt=""></p>
 <p>看起来是不是不错呢。自我感觉nice，，，哈哈哈</p>
 <h4 id="u6269_u5C55background-position_u5C5E_u6027"><a href="#u6269_u5C55background-position_u5C5E_u6027" class="headerlink" title="扩展background-position属性"></a>扩展background-position属性</h4><p>另外我会使用 background-position:center;将图片的中间部分显示在显示区域。图片的四边则会有部分内容无法看见。</p>
 <h4 id="u6269_u5C55background-clip_u5C5E_u6027"><a href="#u6269_u5C55background-clip_u5C5E_u6027" class="headerlink" title="扩展background-clip属性"></a>扩展background-clip属性</h4><p>background-clip: border-box|padding-box|content-box;<br>规定背景的绘制区域。</p>
 <p>经过测试，只有在值为border的时候，是意外的，</p>
-<h6 id="css-2"><a href="#css-2" class="headerlink" title="css"></a>css</h6><pre><code><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">width: 300px;</span><br><span class="line">   height: 250px;</span><br><span class="line">   border: 20px solid rgba(199, 28, 28, 0.3);</span><br><span class="line">   padding: 30px;</span><br><span class="line">   background: green url(./images/b-800-600.jpg) no-repeat;</span><br><span class="line">   background-size: cover;</span><br><span class="line">   background-position: center center;</span><br><span class="line">   background-clip: border-box;</span><br></pre></td></tr></table></figure>
+<p>css:</p>
+<pre><code>width: 300px;
+height: 250px;
+border: 20px solid rgba(199, 28, 28, 0.3);
+padding: 30px;
+background: green url(./images/b-800-600.jpg) no-repeat;
+background-size: cover;
+background-position: center center;
+background-clip: border-box;
 </code></pre><p>结果：<br><img src="http://whyfind.github.io/images/background_clip.png" alt=""></p>
 <p>看效果，意外的是，背景颜色确实是从border开始的，但是背景图片在border区域并没有绘制。</p>
 <h4 id="u6269_u5C55background-origin_u5C5E_u6027"><a href="#u6269_u5C55background-origin_u5C5E_u6027" class="headerlink" title="扩展background-origin属性"></a>扩展background-origin属性</h4><p>background-origin: border-box|padding-box|content-box;<br>规定背景图片的定位区域。</p>
 <h4 id="clip_u548Corigin_u7ED3_u5408_u4F7F_u7528_u5C31_u6B63_u5E38_u4E86_u3002"><a href="#clip_u548Corigin_u7ED3_u5408_u4F7F_u7528_u5C31_u6B63_u5E38_u4E86_u3002" class="headerlink" title="clip和origin结合使用就正常了。"></a>clip和origin结合使用就正常了。</h4><p>随便举个例子，具体的细节就不说明了，大家可以多测试一下：</p>
-<h6 id="css-3"><a href="#css-3" class="headerlink" title="css"></a>css</h6><pre><code><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">width: 300px;</span><br><span class="line">   height: 250px;</span><br><span class="line">   border: 20px solid rgba(199, 28, 28, 0.3);</span><br><span class="line">   padding: 30px;</span><br><span class="line">   background: green url(./images/b-800-600.jpg) no-repeat;</span><br><span class="line">   background-size: cover;</span><br><span class="line">   background-position: center center;</span><br><span class="line">   background-clip: border-box;</span><br><span class="line">background-origin: border-box；</span><br></pre></td></tr></table></figure>
+<p>css:</p>
+<pre><code>width: 300px;
+height: 250px;
+border: 20px solid rgba(199, 28, 28, 0.3);
+padding: 30px;
+background: green url(./images/b-800-600.jpg) no-repeat;
+background-size: cover;
+background-position: center center;
+background-clip: border-box;
+background-origin: border-box；
 </code></pre><p>效果完美！！<br><img src="http://whyfind.github.io/images/backgroundper.png" alt=""></p>
 <p>具体的用法细节，在这里贴几个链接想仔细研究的可以看看。兴许有帮助。<br>①<a href="http://www.cnblogs.com/2050/archive/2012/11/13/2768289.html" title="background-clip与background-origin的用法" target="_blank" rel="external">http://www.cnblogs.com/2050/archive/2012/11/13/2768289.html</a><br>②<a href="http://www.tuicool.com/articles/V3Y7f2" title="背景剪裁Background-clip" target="_blank" rel="external">http://www.tuicool.com/articles/V3Y7f2</a></p>
 
@@ -462,7 +490,7 @@ background-size:auto 100%;
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#u7B2C_u4E00_u79CD_u60C5_u51B5_u4E0B_u5C55_u793A_u5931_u8D25"><span class="nav-number">1.</span> <span class="nav-text">第一种情况下展示失败</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#u7B2C_u4E8C_u79CD_u60C5_u51B5_u4E0B_u5C55_u793A_u5931_u8D25"><span class="nav-number">2.</span> <span class="nav-text">第二种情况下展示失败</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#css"><span class="nav-number">2.0.1.</span> <span class="nav-text">css</span></a></li></ol></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#u7B2C_u4E09_u79CD_u60C5_u51B5_u4E0B_u5C55_u793A_u5931_u8D25"><span class="nav-number">3.</span> <span class="nav-text">第三种情况下展示失败</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#u5B8C_u7F8E_u5B9E_u73B0_u65B9_u5F0F_uFF1A"><span class="nav-number">4.</span> <span class="nav-text">完美实现方式：</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#css-1"><span class="nav-number">4.0.1.</span> <span class="nav-text">css</span></a></li></ol></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#u6269_u5C55background-position_u5C5E_u6027"><span class="nav-number">5.</span> <span class="nav-text">扩展background-position属性</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#u6269_u5C55background-clip_u5C5E_u6027"><span class="nav-number">6.</span> <span class="nav-text">扩展background-clip属性</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#css-2"><span class="nav-number">6.0.1.</span> <span class="nav-text">css</span></a></li></ol></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#u6269_u5C55background-origin_u5C5E_u6027"><span class="nav-number">7.</span> <span class="nav-text">扩展background-origin属性</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#clip_u548Corigin_u7ED3_u5408_u4F7F_u7528_u5C31_u6B63_u5E38_u4E86_u3002"><span class="nav-number">8.</span> <span class="nav-text">clip和origin结合使用就正常了。</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#css-3"><span class="nav-number">8.0.1.</span> <span class="nav-text">css</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#u7B2C_u4E00_u79CD_u60C5_u51B5_u4E0B_u5C55_u793A_u5931_u8D25"><span class="nav-number">1.</span> <span class="nav-text">第一种情况下展示失败</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#u7B2C_u4E8C_u79CD_u60C5_u51B5_u4E0B_u5C55_u793A_u5931_u8D25"><span class="nav-number">2.</span> <span class="nav-text">第二种情况下展示失败</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#u7B2C_u4E09_u79CD_u60C5_u51B5_u4E0B_u5C55_u793A_u5931_u8D25"><span class="nav-number">3.</span> <span class="nav-text">第三种情况下展示失败</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#u5B8C_u7F8E_u5B9E_u73B0_u65B9_u5F0F_uFF1A"><span class="nav-number">4.</span> <span class="nav-text">完美实现方式：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#u6269_u5C55background-position_u5C5E_u6027"><span class="nav-number">5.</span> <span class="nav-text">扩展background-position属性</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#u6269_u5C55background-clip_u5C5E_u6027"><span class="nav-number">6.</span> <span class="nav-text">扩展background-clip属性</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#u6269_u5C55background-origin_u5C5E_u6027"><span class="nav-number">7.</span> <span class="nav-text">扩展background-origin属性</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#clip_u548Corigin_u7ED3_u5408_u4F7F_u7528_u5C31_u6B63_u5E38_u4E86_u3002"><span class="nav-number">8.</span> <span class="nav-text">clip和origin结合使用就正常了。</span></a></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator">
