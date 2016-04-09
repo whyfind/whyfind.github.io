@@ -57,40 +57,24 @@
 
 
 
-<meta name="description" content="一、call、apply用法1.1、For Examplevar one = {
-      content : &amp;quot;结束吧！&amp;quot;,
-      year : &amp;quot;2015年是去年了。&amp;quot;,
-      print : function() {
-        console.log(this.content + this.year );
-      }
-}
-
-on">
+<meta name="description" content="前文：当一个需要div固定宽度和高度的时候，里面展示着一个图片，但是图片大小不定。那么这大小不定的图片，如何在这个div里面完美展现呢？我说的完美展示即是①图片不变形②且尽可能的展示图片③div里面不会留白。(ps:其实这是一个面试题目，但是当初呢，我不知道啊不知道啊。现在我知道了。我知道了。说两遍~~)
+第一种情况下展示失败首先呢，是先将图片展示的时候设置成div的背景图的形式展示。准备一张80">
 <meta property="og:type" content="article">
-<meta property="og:title" content="apply-call-bind的用法以及他们的区别">
-<meta property="og:url" content="http://yoursite.com/2016/02/17/apply-call-bind的用法以及它们的区别/index.html">
+<meta property="og:title" content="一张图片如何在固定宽高的div里完美的展现？">
+<meta property="og:url" content="http://yoursite.com/2016/04/07/图片在div里完美的展现/index.html">
 <meta property="og:site_name" content="whyfind">
-<meta property="og:description" content="一、call、apply用法1.1、For Examplevar one = {
-      content : &amp;quot;结束吧！&amp;quot;,
-      year : &amp;quot;2015年是去年了。&amp;quot;,
-      print : function() {
-        console.log(this.content + this.year );
-      }
-}
-
-on">
-<meta property="og:updated_time" content="2016-03-27T12:49:07.736Z">
+<meta property="og:description" content="前文：当一个需要div固定宽度和高度的时候，里面展示着一个图片，但是图片大小不定。那么这大小不定的图片，如何在这个div里面完美展现呢？我说的完美展示即是①图片不变形②且尽可能的展示图片③div里面不会留白。(ps:其实这是一个面试题目，但是当初呢，我不知道啊不知道啊。现在我知道了。我知道了。说两遍~~)
+第一种情况下展示失败首先呢，是先将图片展示的时候设置成div的背景图的形式展示。准备一张80">
+<meta property="og:image" content="http://http://whyfind.github.io/images/backgroundSW.png">
+<meta property="og:image" content="http://http://whyfind.github.io/images/backgroundSH.png">
+<meta property="og:image" content="http://whyfind.github.io/images/backgroundcover.png">
+<meta property="og:image" content="http://http://whyfind.github.io/images/background_clip.png">
+<meta property="og:image" content="http://http://whyfind.github.io/images/backgroundper.png">
+<meta property="og:updated_time" content="2016-04-09T14:12:18.546Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="apply-call-bind的用法以及他们的区别">
-<meta name="twitter:description" content="一、call、apply用法1.1、For Examplevar one = {
-      content : &amp;quot;结束吧！&amp;quot;,
-      year : &amp;quot;2015年是去年了。&amp;quot;,
-      print : function() {
-        console.log(this.content + this.year );
-      }
-}
-
-on">
+<meta name="twitter:title" content="一张图片如何在固定宽高的div里完美的展现？">
+<meta name="twitter:description" content="前文：当一个需要div固定宽度和高度的时候，里面展示着一个图片，但是图片大小不定。那么这大小不定的图片，如何在这个div里面完美展现呢？我说的完美展示即是①图片不变形②且尽可能的展示图片③div里面不会留白。(ps:其实这是一个面试题目，但是当初呢，我不知道啊不知道啊。现在我知道了。我知道了。说两遍~~)
+第一种情况下展示失败首先呢，是先将图片展示的时候设置成div的背景图的形式展示。准备一张80">
 
 
 
@@ -108,7 +92,7 @@ on">
   };
 </script>
 
-  <title> apply-call-bind的用法以及他们的区别 | whyfind </title>
+  <title> 一张图片如何在固定宽高的div里完美的展现？ | whyfind </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -236,7 +220,7 @@ on">
             
             
               
-                apply-call-bind的用法以及他们的区别
+                一张图片如何在固定宽高的div里完美的展现？
               
             
           </h1>
@@ -248,8 +232,8 @@ on">
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-02-17T19:41:33+08:00" content="2016-02-17">
-              2016-02-17
+            <time itemprop="dateCreated" datetime="2016-04-07T19:41:33+08:00" content="2016-04-07">
+              2016-04-07
             </time>
           </span>
 
@@ -259,8 +243,8 @@ on">
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/02/17/apply-call-bind的用法以及它们的区别/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/02/17/apply-call-bind的用法以及它们的区别/" itemprop="commentsCount"></span>
+                <a href="/2016/04/07/图片在div里完美的展现/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/04/07/图片在div里完美的展现/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -281,103 +265,41 @@ on">
       
 
       
-        <h3 id="u4E00_u3001call_u3001apply_u7528_u6CD5"><a href="#u4E00_u3001call_u3001apply_u7528_u6CD5" class="headerlink" title="一、call、apply用法"></a>一、call、apply用法</h3><h4 id="1-1_u3001For_Example"><a href="#1-1_u3001For_Example" class="headerlink" title="1.1、For Example"></a>1.1、For Example</h4><pre><code>var one = {
-      content : &quot;结束吧！&quot;,
-      year : &quot;2015年是去年了。&quot;,
-      print : function() {
-        console.log(this.content + this.year );
-      }
-}
-
-one.print();//结束吧！2015年是去年了。
-</code></pre><p>这样one.print()的打印结果是显而易见的不用多说。</p>
-<pre><code>var two = {
-      content : &quot;时间很快~&quot;,
-      year : &quot;今年是2016年了。&quot;,
-}
-</code></pre><p>现在我们新增加一个 two对象。那么需求来了：two对象本身没有print方法，那么如何用one对象里面的print方法来显示数据呢？那就可以用到call或者apply了。</p>
-<pre><code>one.print.call(two);  //时间很快~今年是2016年了。
-one.print.apply(two); //时间很快~今年是2016年了。
-</code></pre><a id="more"></a>
-<h4 id="1-2__u5E94_u7528_u573A_u666F"><a href="#1-2__u5E94_u7528_u573A_u666F" class="headerlink" title="1.2 应用场景"></a>1.2 应用场景</h4><p>1.2.1 数组之间的追加</p>
-<pre><code>var arr1 = [1 , 2 , 3 , 4]; 
-var arr2 = [5 , 6 , &quot;name&quot;]; 
-Array.prototype.push.apply(arr1, arr2); 
-console.log(arr1);//[1, 2, 3, 4, 5, 6, &quot;name&quot;]
-</code></pre><p>1.2.2 获取数组中的最大值和最小值</p>
-<pre><code>var arr3 = [5, 4 , 120 , -230 ]; 
-var maxValue = Math.max.apply(Math, arr3),   //120
-    maxValue = Math.max.call(Math,5, 4 , 120 , -230); //230
-</code></pre><p>数组本身没有max方法。但是Math 有，我们就可以借助 call 或者 apply 使用其方法。</p>
-<h3 id="u4E8C__u3001call_u548Capply_u4E4B_u95F4_u7684_u533A_u522B"><a href="#u4E8C__u3001call_u548Capply_u4E4B_u95F4_u7684_u533A_u522B" class="headerlink" title="二 、call和apply之间的区别"></a>二 、call和apply之间的区别</h3><p>说到这两者之间的区别，就得先看看他们的定义了。你就不难发现其中的区别。</p>
-<p>2.1 call方法 </p>
-<pre><code>调用一个对象的一个方法，以另一个对象替换当前对象。 
-
-call([thisObj[,arg1[, arg2[, [,.argN]]]]]) 
-
-参数：
-
-thisObj:可选项。将被用作当前对象的对象。 
-
-arg1, arg2, , argN:可选项。将被传递方法参数序列。 
-</code></pre><p>2.2 apply方法 </p>
-<pre><code>应用某一对象的一个方法，用另一个对象替换当前对象。
-
-apply([thisObj[,argArray]]) 
-
-参数： 
-
-thisObj:可选项。将被用作当前对象的对象。
-
-argArray:可选项。将被传递给该函数的参数数组。 
-</code></pre><p>2.3 For Example </p>
-<pre><code>var func = function(arg1, arg2) {};
-func.call(this, arg1, arg2);
-func.apply(this, [arg1, arg2]);
-</code></pre><p>其中 this 是你想指定的上下文，他可以是任何一个 JavaScript 对象(JavaScript 中一切皆对象)，call 需要把参数按顺序传递进去，而 apply 则是把参数放在数组里。</p>
-<p>可以看出两者的区别：对于 apply、call 二者而言，作用完全一样，只是接受参数的方式不太一样。</p>
-<h3 id="u4E09_u3001bind_u7684_u7528_u6CD5"><a href="#u4E09_u3001bind_u7684_u7528_u6CD5" class="headerlink" title="三、bind的用法"></a>三、bind的用法</h3><p>For Example</p>
-<pre><code>var func= function(){
-    console.log(this.name);
-}
-var foo = {
-    &quot;name&quot; : &quot;whyFind&quot;
-}
-var usebind = func.bind(foo);
-usebind(); //whyFind
-</code></pre><p>MDN的解释是：bind()方法会创建一个新函数，称为绑定函数，当调用这个绑定函数时，绑定函数会以创建它时传入 bind()方法的第一个参数作为 this，传入 bind() 方法的第二个以及以后的参数加上绑定函数运行时本身的参数按照顺序作为原函数的参数来调用原函数。</p>
-<p>在一道非常经典的面试题中就可以用bind来解决实际问题：</p>
-<pre><code>var foo = function(){
-    this.myName = &quot;Hello, World!&quot;;
-}
-foo.prototype.sayHello = function(){
-    console.log(this.myName);
-}
-foo.prototype.bar = function(){
-    setTimeout(this.sayHello, 1000);
-}
-var f = new foo;
-f.bar(); //undefined
-</code></pre><p>这里的myNmae并不能被正确打印出来。那么怎么办呢？看这里。。</p>
-<pre><code>var foo = function(){
-    this.myName = &quot;Hello, World!&quot;;
-}
-foo.prototype.sayHello = function(){
-    console.log(this.myName);
-}
-foo.prototype.bar = function(){
-    setTimeout(this.sayHello.bind(this), 1000);
-}
-var f = new foo;
-f.bar(); //Hello, World!
-</code></pre><p>这样就能正确的打印出来了。</p>
-<h3 id="u56DB_u3001_u603B_u7ED3"><a href="#u56DB_u3001_u603B_u7ED3" class="headerlink" title="四、总结"></a>四、总结</h3><p>1.apply 、 call 用法功能大致相同，只是传入的参数的方法不一样；</p>
-<p>2.apply 、 call 、bind 三者都是用来改变函数的this对象的指向的；</p>
-<p>3.apply 、 call 、bind 三者第一个参数都是this要指向的对象，也就是想指定的上下文；</p>
-<p>4.apply 、call 则是直接返回结果(立即调用)；bind 是返回对应函数体，稍后应该再调用一次。</p>
-<h3 id="u4E94_u3001_u601D_u8003_u4EBA_u751F"><a href="#u4E94_u3001_u601D_u8003_u4EBA_u751F" class="headerlink" title="五、思考人生"></a>五、思考人生</h3><p>ps:第一次正式写这样的文章。抄抄改改，最主要是供自己学习之用，更加能理解其功能，形式于学习笔记了。</p>
-<p>ps:发现自己一直缺少思考。东西拿来即用，缺少钻研的精神。多多培养自己这方面的，多学多看多观察多思考多多益善。致力于改变自己，在美好的未来遇见更美好的自己。哈哈。。</p>
-<p>ps:好像电脑看久了。眼睛的视力都下降了许多许多多。。身体是革命的本钱，多运动运动。多走走走。。。整个一个感慨就是自己要多做些什么、、加油</p>
+        <p>前文：当一个需要div固定宽度和高度的时候，里面展示着一个图片，但是图片大小不定。那么这大小不定的图片，如何在这个div里面完美展现呢？我说的完美展示即是①图片不变形②且尽可能的展示图片③div里面不会留白。(ps:其实这是一个面试题目，但是当初呢，我不知道啊不知道啊。现在我知道了。我知道了。说两遍~~)</p>
+<h4 id="u7B2C_u4E00_u79CD_u60C5_u51B5_u4E0B_u5C55_u793A_u5931_u8D25"><a href="#u7B2C_u4E00_u79CD_u60C5_u51B5_u4E0B_u5C55_u793A_u5931_u8D25" class="headerlink" title="第一种情况下展示失败"></a>第一种情况下展示失败</h4><p>首先呢，是先将图片展示的时候设置成div的背景图的形式展示。准备一张800*600的图片</p>
+<p>div样式设置成：</p>
+<pre><code>width:300px;
+height:300px;
+border:3px solid black;
+background:url(./images/b-800-600.jpg) no-repeat;
+background-size:auto 100%;
+</code></pre><p>效果：<br><img src="http://http://whyfind.github.io/images/backgroundSW.png" alt=""></p>
+<p>显然此时高度100%，宽度自适应时的等比例下，，宽度不够，则无法填充整个div。导致右边有留白。</p>
+<h4 id="u7B2C_u4E8C_u79CD_u60C5_u51B5_u4E0B_u5C55_u793A_u5931_u8D25"><a href="#u7B2C_u4E8C_u79CD_u60C5_u51B5_u4E0B_u5C55_u793A_u5931_u8D25" class="headerlink" title="第二种情况下展示失败"></a>第二种情况下展示失败</h4><p>首先呢，是先将图片展示的时候设置成div的背景图的形式展示。准备一张800*600的图片</p>
+<h6 id="css"><a href="#css" class="headerlink" title="css"></a>css</h6><pre><code><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">width:300px;</span><br><span class="line">height:300px;</span><br><span class="line">border:3px solid black;</span><br><span class="line">background:url(./images/b-800-600.jpg) no-repeat;</span><br><span class="line">background-size:100% auto;</span><br></pre></td></tr></table></figure>
+</code></pre><p>效果：<br><img src="http://http://whyfind.github.io/images/backgroundSH.png" alt=""></p>
+<p>显然此时宽度100%，高度自适应时的等比例下，，高度不够，则无法填充整个div。导致下边有留白。</p>
+<h4 id="u7B2C_u4E09_u79CD_u60C5_u51B5_u4E0B_u5C55_u793A_u5931_u8D25"><a href="#u7B2C_u4E09_u79CD_u60C5_u51B5_u4E0B_u5C55_u793A_u5931_u8D25" class="headerlink" title="第三种情况下展示失败"></a>第三种情况下展示失败</h4><p>同样的如果在不是与图片宽高等比例的div里面，强行将div的</p>
+<pre><code>background-size:100% 100%;
+</code></pre><p>这样填充满，则会导致图片的变形。也不是我们想要的。</p>
+<p>那么如何实现图片在未知的div下完美展现呢？</p>
+<h4 id="u5B8C_u7F8E_u5B9E_u73B0_u65B9_u5F0F_uFF1A"><a href="#u5B8C_u7F8E_u5B9E_u73B0_u65B9_u5F0F_uFF1A" class="headerlink" title="完美实现方式："></a>完美实现方式：</h4><p>其实API里面都写了。确实是我不够细心，到这会才发现。就是用background-size:cover;他所形成的效果是这么描述的：</p>
+<p><strong>把背景图像扩展至足够大，以使背景图像完全覆盖背景区域。背景图像的某些部分也许无法显示在背景定位区域中。</strong></p>
+<p>扩展至足够大，足够大，足够大，以使背景图像完全覆盖背景区域！这描述的效果基本上满足我想要的完美展现图片了。但是呢。导致的就是有部分会无法显示。但是没办法！！！</p>
+<h6 id="css-1"><a href="#css-1" class="headerlink" title="css"></a>css</h6><pre><code><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">width: 300px;</span><br><span class="line">   height: 250px;</span><br><span class="line">   border: 3px solid black;</span><br><span class="line">   background: url(./images/b-800-600.jpg) no-repeat;</span><br><span class="line">   background-size: cover;</span><br><span class="line">   background-position: center;</span><br></pre></td></tr></table></figure>
+</code></pre><p>效果：<br><img src="http://whyfind.github.io/images/backgroundcover.png" alt=""></p>
+<p>看起来是不是不错呢。自我感觉nice，，，哈哈哈</p>
+<h4 id="u6269_u5C55background-position_u5C5E_u6027"><a href="#u6269_u5C55background-position_u5C5E_u6027" class="headerlink" title="扩展background-position属性"></a>扩展background-position属性</h4><p>另外我会使用 background-position:center;将图片的中间部分显示在显示区域。图片的四边则会有部分内容无法看见。</p>
+<h4 id="u6269_u5C55background-clip_u5C5E_u6027"><a href="#u6269_u5C55background-clip_u5C5E_u6027" class="headerlink" title="扩展background-clip属性"></a>扩展background-clip属性</h4><p>background-clip: border-box|padding-box|content-box;<br>规定背景的绘制区域。</p>
+<p>经过测试，只有在值为border的时候，是意外的，</p>
+<h6 id="css-2"><a href="#css-2" class="headerlink" title="css"></a>css</h6><pre><code><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">width: 300px;</span><br><span class="line">   height: 250px;</span><br><span class="line">   border: 20px solid rgba(199, 28, 28, 0.3);</span><br><span class="line">   padding: 30px;</span><br><span class="line">   background: green url(./images/b-800-600.jpg) no-repeat;</span><br><span class="line">   background-size: cover;</span><br><span class="line">   background-position: center center;</span><br><span class="line">   background-clip: border-box;</span><br></pre></td></tr></table></figure>
+</code></pre><p>结果：<br><img src="http://http://whyfind.github.io/images/background_clip.png" alt=""></p>
+<p>看效果，意外的是，背景颜色确实是从border开始的，但是背景图片在border区域并没有绘制。</p>
+<h4 id="u6269_u5C55background-origin_u5C5E_u6027"><a href="#u6269_u5C55background-origin_u5C5E_u6027" class="headerlink" title="扩展background-origin属性"></a>扩展background-origin属性</h4><p>background-origin: border-box|padding-box|content-box;<br>规定背景图片的定位区域。</p>
+<h4 id="clip_u548Corigin_u7ED3_u5408_u4F7F_u7528_u5C31_u6B63_u5E38_u4E86_u3002"><a href="#clip_u548Corigin_u7ED3_u5408_u4F7F_u7528_u5C31_u6B63_u5E38_u4E86_u3002" class="headerlink" title="clip和origin结合使用就正常了。"></a>clip和origin结合使用就正常了。</h4><p>随便举个例子，具体的细节就不说明了，大家可以多测试一下：</p>
+<h6 id="css-3"><a href="#css-3" class="headerlink" title="css"></a>css</h6><pre><code><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">width: 300px;</span><br><span class="line">   height: 250px;</span><br><span class="line">   border: 20px solid rgba(199, 28, 28, 0.3);</span><br><span class="line">   padding: 30px;</span><br><span class="line">   background: green url(./images/b-800-600.jpg) no-repeat;</span><br><span class="line">   background-size: cover;</span><br><span class="line">   background-position: center center;</span><br><span class="line">   background-clip: border-box;</span><br><span class="line">background-origin: border-box；</span><br></pre></td></tr></table></figure>
+</code></pre><p>效果完美！！<br><img src="http://http://whyfind.github.io/images/backgroundper.png" alt=""></p>
+<p>具体的用法细节，在这里贴几个链接想仔细研究的可以看看。兴许有帮助。<br>①<a href="http://www.cnblogs.com/2050/archive/2012/11/13/2768289.html" title="background-clip与background-origin的用法" target="_blank" rel="external">http://www.cnblogs.com/2050/archive/2012/11/13/2768289.html</a><br>②<a href="http://www.tuicool.com/articles/V3Y7f2" title="背景剪裁Background-clip" target="_blank" rel="external">http://www.tuicool.com/articles/V3Y7f2</a></p>
 
       
     </div>
@@ -389,17 +311,13 @@ f.bar(); //Hello, World!
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/01/24/Hexo-deploy操作踩过的坑/" rel="next" title="Hexo deploy操作踩过的坑">
-                <i class="fa fa-chevron-left"></i> Hexo deploy操作踩过的坑
+              <a href="/2016/03/27/WebTemplate/" rel="next" title="在这里介绍2种前端模板的用法(ejs和html imports)">
+                <i class="fa fa-chevron-left"></i> 在这里介绍2种前端模板的用法(ejs和html imports)
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/02/19/web前端题/" rel="prev" title="web前端题目---面试者的福利">
-                web前端题目---面试者的福利 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -425,8 +343,8 @@ f.bar(); //Hello, World!
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/02/17/apply-call-bind的用法以及它们的区别/"
-           data-title="apply-call-bind的用法以及他们的区别" data-url="http://yoursite.com/2016/02/17/apply-call-bind的用法以及它们的区别/">
+      <div class="ds-thread" data-thread-key="2016/04/07/图片在div里完美的展现/"
+           data-title="一张图片如何在固定宽高的div里完美的展现？" data-url="http://yoursite.com/2016/04/07/图片在div里完美的展现/">
       </div>
     
   </div>
@@ -543,7 +461,7 @@ f.bar(); //Hello, World!
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#u4E00_u3001call_u3001apply_u7528_u6CD5"><span class="nav-number">1.</span> <span class="nav-text">一、call、apply用法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-1_u3001For_Example"><span class="nav-number">1.1.</span> <span class="nav-text">1.1、For Example</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-2__u5E94_u7528_u573A_u666F"><span class="nav-number">1.2.</span> <span class="nav-text">1.2 应用场景</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u4E8C__u3001call_u548Capply_u4E4B_u95F4_u7684_u533A_u522B"><span class="nav-number">2.</span> <span class="nav-text">二 、call和apply之间的区别</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u4E09_u3001bind_u7684_u7528_u6CD5"><span class="nav-number">3.</span> <span class="nav-text">三、bind的用法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u56DB_u3001_u603B_u7ED3"><span class="nav-number">4.</span> <span class="nav-text">四、总结</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u4E94_u3001_u601D_u8003_u4EBA_u751F"><span class="nav-number">5.</span> <span class="nav-text">五、思考人生</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#u7B2C_u4E00_u79CD_u60C5_u51B5_u4E0B_u5C55_u793A_u5931_u8D25"><span class="nav-number">1.</span> <span class="nav-text">第一种情况下展示失败</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#u7B2C_u4E8C_u79CD_u60C5_u51B5_u4E0B_u5C55_u793A_u5931_u8D25"><span class="nav-number">2.</span> <span class="nav-text">第二种情况下展示失败</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#css"><span class="nav-number">2.0.1.</span> <span class="nav-text">css</span></a></li></ol></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#u7B2C_u4E09_u79CD_u60C5_u51B5_u4E0B_u5C55_u793A_u5931_u8D25"><span class="nav-number">3.</span> <span class="nav-text">第三种情况下展示失败</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#u5B8C_u7F8E_u5B9E_u73B0_u65B9_u5F0F_uFF1A"><span class="nav-number">4.</span> <span class="nav-text">完美实现方式：</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#css-1"><span class="nav-number">4.0.1.</span> <span class="nav-text">css</span></a></li></ol></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#u6269_u5C55background-position_u5C5E_u6027"><span class="nav-number">5.</span> <span class="nav-text">扩展background-position属性</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#u6269_u5C55background-clip_u5C5E_u6027"><span class="nav-number">6.</span> <span class="nav-text">扩展background-clip属性</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#css-2"><span class="nav-number">6.0.1.</span> <span class="nav-text">css</span></a></li></ol></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#u6269_u5C55background-origin_u5C5E_u6027"><span class="nav-number">7.</span> <span class="nav-text">扩展background-origin属性</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#clip_u548Corigin_u7ED3_u5408_u4F7F_u7528_u5C31_u6B63_u5E38_u4E86_u3002"><span class="nav-number">8.</span> <span class="nav-text">clip和origin结合使用就正常了。</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#css-3"><span class="nav-number">8.0.1.</span> <span class="nav-text">css</span></a></li></ol></li></ol></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator">
