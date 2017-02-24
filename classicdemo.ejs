@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html> 
+<head> 
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="description" content="前端学习总结~"/>
+    <meta name="keywords" content="前端学习总结~"/>
+    <meta name="author" content="whyfind, 927230462@qq.com"/>
+    <title>收藏学习</title>
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <link rel="stylesheet" type="text/css" href="./css/animate.css">
+    <link rel="stylesheet" type="text/css" href="./css/modern-accordion.css">
+</head> 
+<body class="another">
+
+<!--顶部-->
+<%- include('header') %>
+
+<div class="container">
+    <div class="getfrom wid1200">
+                <ul class="mdn-accordion single-level-accordion blue-accordion-theme">
+            <li class="sub-level">
+                <input class="accordion-toggle" type="checkbox" name="accordion-panel-1" id="accordion-panel-1">
+                <label class="accordion-title" for="accordion-panel-1"> <i class="fa fa-file-text"></i>CSS</label>
+                <ul style="display: none;">
+                    <li>
+                        <ol>
+                            <li><a href="http://www.zhangxinxu.com/study/200911/image-center-new-method-test.html">图片垂直居中</a></li>
+                             <li><a href="http://www.webhek.com/misc/css-loaders">由css绘制的loading效果</a></li>
+                             <li><a href="http://www.cnblogs.com/lhb25/archive/2012/03/05/few-new-collections-css3-effects.html">20个非常绚丽的CSS3特效</a></li>
+                             <li><a href="http://apps.eky.hk/css-triangle-generator/zh-hant">CSS三角形產生器</a></li>
+                             <li><a href="http://www.webhek.com/misc/css-loaders"> 纯css3绘制的loading效果</a></li>           
+                             <li><a href="http://isux.tencent.com/css3/tools.html">CSS3动画生成工具</a></li>
+                             <li><a href="https://daneden.github.io/animate.css/">Animate.css</a></li>
+                             <li><a href="http://www.tuhaokuai.com/image">一款非常压缩图片的地址</a></li>           
+                        </ol>
+                    </li>
+                </ul>
+            </li>
+            
+            <li class="sub-level">
+                <input class="accordion-toggle" type="checkbox" name="accordion-panel-2" id="accordion-panel-2">
+                <label class="accordion-title" for="accordion-panel-2"><i class="fa fa-file-text"></i> JS </label>
+                <ul style="display: none;">
+                    <li>
+                        <ol>
+                            <li><a href="http://koen301.github.io/myfocus/">非常棒的一个轮播效果</a></li> 
+                            <li><a href="https://github.com/fouber/blog/issues/10">前端工程文章</a></li> 
+                            <li><a href="https://github.com/fouber/blog/issues/10">前端工程化基础篇</a></li>
+                            <li><a href="http://m.sui.taobao.org/docs-demos/structure/"> SUI Mobile Demo</a></li>
+                            <li><a href="http://www.haorooms.com/post/qianduan_mianshi">前端面试过程中常被问到的问题</a></li>
+                        </ol>
+                    </li>
+                </ul>
+            </li>
+            
+            <li class="sub-level">
+                <input class="accordion-toggle" type="checkbox" name="accordion-panel-3" id="accordion-panel-3">
+                <label class="accordion-title" for="accordion-panel-3"><i class="fa fa-file-text"></i> Font </label>
+                <ul style="display: none;">
+                    <li>
+                        <ol>
+                            <li><a href="http://www.iconfont.cn/collections?personal=1">阿里妈妈字体库，超级棒</a></li>
+                            <li><a href="http://font.baidu.com/">一款制作字体的工具</a></li>
+                        </ol>
+                    </li>
+                </ul>
+            </li>
+            
+            <li class="sub-level">
+                <input class="accordion-toggle" type="checkbox" name="accordion-panel-4" id="accordion-panel-4">
+                <label class="accordion-title" for="accordion-panel-4"><i class="fa fa-file-text"></i> 其他 </label>
+                <ul>
+                    <li>
+                        <ol>
+                            <li><a href="https://github.com/Jeff2Ma/JGulp">利用gulp构建前端项目自动化工作流</a></li>
+                            <li><a href="http://www.css88.com/archives/5820">非常全的介绍了如何打造自动化的前端项目</a></li>   
+                        </ol>
+                    </li>
+                </ul>
+            </li>                 
+        </ul>
+    </div>
+</div>
+
+<!--底部-->
+<%- include('footer') %>
+
+</body> 
+<script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="js/modern-accordion.js"></script>
+<script type="text/javascript">
+    $(".head_list .act").removeClass("act");
+    $(".head_list .classic").addClass("act");
+    $(".header .ngbg").css("width","100%");
+    //jQuery写法
+    $(function(){
+        //页面加载完成
+        $(window).load(function () {
+            $(".load .loading").animate({marginTop:'-200px'},600,function(){
+                $(document.body).removeClass('overflow');
+                $(".load").remove();
+            });
+        });
+        //滚轴事件
+        $(window).scroll(function(){
+            clearInterval(timer);
+            var timer = setTimeout(function(){
+                var top = $(window).scrollTop();//这个方法是当前滚动条滚动的距离
+                if(top>100){
+                    $(".ngbg").css({width:'100%'});
+                }else{
+                     $(".ngbg").css({width:'0'});
+                }
+            },100);
+            
+        });
+    });
+</script>
+</html> 
+
+
+

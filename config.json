@@ -1,0 +1,27 @@
+{
+  "files": [
+    {
+      "dest": "index.html",
+      "template": "index",
+      "locals": {}
+    },
+    {
+      "dest": "classicdemo.html",
+      "template": "classicdemo",
+      "locals": {}
+    },
+    {
+      "dest": "aboutme.html",
+      "template": "aboutme",
+      "locals": {}
+    },
+    {
+      "dest": "showdemo.html",
+      "template": "showdemo",
+      "locals": {}
+    }
+  ],
+  "globals": {
+    
+  }
+}
