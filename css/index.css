@@ -218,8 +218,9 @@ html,body{
 }
 .container.indexbg{
   padding-top: 0;
-  background:url(http://cewbe.img47.wal8.com/img47/542182_20160405163502/145984565691.jpg),
+  background:url(../images/pro.jpg),
   -webkit-linear-gradient(0deg,#0f93e9,#f0670d) no-repeat ;
+  background-size: 100% auto;
   height: 100%;
   width: 100%;
 /*  -webkit-filter:brightness(0.5);
