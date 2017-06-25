@@ -1,0 +1,54 @@
+<html>
+    <head>
+    <meta charset="utf-8">
+    <title>vue知乎</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="format-detection" content="telephone=no">
+
+    <!-- UC强制全屏 -->
+    <meta name="full-screen" content="yes">
+    <!-- QQ应用模式 -->
+    <meta name="x5-page-mode" content="app">
+    <meta name="author" content="Longjw, hilongjw@gmail.com">
+    <script src="vue.js"></script>
+    </head>
+    <body>
+        <div id="test">
+            <button v-on:click.once="click">333</button>
+            <input type="text" v-model="msg" >
+            {{msg}}
+
+            <input type="text" v-bind:value="msg1" >
+            {{msg1}}
+
+            <span v-text="msg"></span>
+            <span>{{msg}}</span>
+            
+
+        </div>
+
+        <script type="text/javascript" >
+            var vm = new Vue({
+                el: '#test',
+                data: function(){
+                    return {
+                        msg: "1111",
+                        msg1: "222"
+                    }
+                },
+                methods: {
+                    click:function(){
+                        // this.msg1='66666'
+                        console.log(1)
+                        this.$set('msg1','44444444')
+                    }
+                }
+            })
+            
+        </script>
+
+       
+    </body>
+</html>

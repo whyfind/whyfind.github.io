@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>vue知乎</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="format-detection" content="telephone=no">
+
+    <!-- UC强制全屏 -->
+    <meta name="full-screen" content="yes">
+    <!-- QQ应用模式 -->
+    <meta name="x5-page-mode" content="app">
+    <meta name="author" content="Longjw, hilongjw@gmail.com">
+    <link rel="stylesheet" href="index.css" > 
+    <link rel="stylesheet" href="zhi.css" > 
+
+    <link rel="stylesheet" type="text/css" href="./list.template/list.css">
+    <link rel="stylesheet" type="text/css" href="./articles.template/articles.css">
+    <link rel="stylesheet" type="text/css" href="./article.template/article.css">
+    <link rel="stylesheet" type="text/css" href="./news.template/news.css">
+
+    <link rel="stylesheet" type="text/css" href="./themes.template/themes.css">
+    <link rel="stylesheet" type="text/css" href="./themes.list.template/themes.list.css">
+    <link rel="stylesheet" type="text/css" href="./card.template/card.css">
+
+    <link rel="stylesheet" type="text/css" href="./about.template/about.css">   
+
+    <style type="text/css">
+        .container {
+            max-width: 80rem;
+            margin-left: auto;
+            margin-right: auto;
+            padding-top: 7rem;
+        }
+    </style>
+
+  </head>
+  <body>
+      <div id="entry" class="container">
+          <nav class="cov-nav">
+            <div class="nav-tab" @click="navRoute($event, 'index')">首页</div>
+            <div class="nav-tab" @click="navRoute($event, 'themes')">主题日报</div>
+            <div class="nav-tab" @click="navRoute($event, 'about')">关于</div>
+            <div class="nav-rail">
+                <span class="nav-moving" :style="covNav.moving"></span>
+            </div>
+        </nav>
+        <router-view></router-view>
+      </div>
+  
+    <script type="text/javascript" src="vue.js" ></script>
+    <script type="text/javascript" src="vue-router.min.js" ></script>
+    <script type="text/javascript" src="jquery.js"></script>
+
+    <script type="text/javascript" src="./list.template/list.js" ></script>
+    <script type="text/javascript" src="./articles.template/articles.js" ></script>
+    <script type="text/javascript" src="./article.template/article.js" ></script>
+    <script type="text/javascript" src="./news.template/news.js" ></script>
+
+    <script type="text/javascript" src="./themes.template/themes.js" ></script>
+    <script type="text/javascript" src="./themes.list.template/themes.list.js" ></script>
+    <script type="text/javascript" src="./card.template/card.js" ></script>
+
+    <script type="text/javascript" src="./about.template/about.js" ></script>
+
+    <script type="text/javascript" >
+        var defaultImg = 'data:img/jpg;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6NDY2MDRDMEQyMEYwMTFFNkI1QTU5MzQ0NzJBQjAwMjUiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6NDY2MDRDMEUyMEYwMTFFNkI1QTU5MzQ0NzJBQjAwMjUiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo0NjYwNEMwQjIwRjAxMUU2QjVBNTkzNDQ3MkFCMDAyNSIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo0NjYwNEMwQzIwRjAxMUU2QjVBNTkzNDQ3MkFCMDAyNSIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/Pin/KgwAAAAPSURBVHjaYv7//z9AgAEABgoDAVaShiAAAAAASUVORK5CYII='
+
+        var App = Vue.extend({
+            data: function () {
+                return {
+                    Progress: {
+                        percent: 0,
+                        options: {
+                            show: true,
+                            canSuccess: true,
+                            color: 'rgb(1, 223, 255)',
+                            failedColor: 'red',
+                            height: '2px'
+                        }
+                    },
+                    covNav: {
+                        navMap: {},
+                        currentX: 0,
+                        moving: {
+                            width: '8px',
+                            transform: 'translateX(0px)'
+                        }
+                    }
+                }
+            },
+            components: {
+                //progress
+            },
+            created: function () {
+                // this.$progress.setHolder(this.vueProgress)
+            },
+            ready: function () {
+                this.initNav()
+            },
+            methods: {
+                navRoute: function (e, name) {
+                    this.touchNav(e, () => {
+                        this.$route.router.go({name: name})
+                    })
+                },
+                initNav: function () {
+                    let x = document.getElementsByClassName('nav-tab')[0].clientWidth * 0.5
+                    this.covNav.moving = {
+                        width: '8px',
+                        transform: `translateX(${x}px)`
+                    }
+                },
+                moving: function (w, x) {
+                    this.covNav.currentX = x
+                    this.covNav.moving = {
+                        width: w + 'px',
+                        transform: `translateX(${x - w}px)`
+                    }
+                },
+                touchNav:function (e, after) {
+                    let parent = e.target.parentNode || e.path[1]
+                    let count = 1
+                    for (let node of parent.getElementsByClassName('nav-tab')) {
+                        if (node === e.target) {
+                            break
+                        }
+                        count++
+                    }
+                    let x = e.target.clientWidth * (count - 0.5)
+                    this.moving(e.target.clientWidth * 0.8 + x * 0.05, x + e.target.clientWidth * 0.5 + x * 0.05)
+                    this.$nextTick(() => {
+                        setTimeout(() => {
+                            this.covNav.moving = {
+                                width: '8px',
+                                transform: `translateX(${x}px)`
+                            }
+                            after()
+                        }, 100)
+                    })
+                }
+            }
+        })
+        var router = new VueRouter()
+        router.map({
+            '/': {
+                name: 'index',
+                component: list
+            },
+            '/news/:id':{
+                 name: 'news',
+                 component: news
+            },
+            '/themes':{
+                 name: 'themes',
+                 component: themes
+            },
+            '/themes/:id':{
+                 name: 'theme-list',
+                 component: themesList
+            },
+            'about': {
+                name: 'about',
+                component: about
+            }
+        })
+        router.start(App, '#entry')
+
+    </script>
+
+  </body>
+</html>

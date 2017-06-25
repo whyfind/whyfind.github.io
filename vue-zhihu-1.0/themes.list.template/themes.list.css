@@ -1,0 +1,12 @@
+.card-list {
+    position: relative;
+    padding: 0;
+    padding-top: 5rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid #ECECEC;
+}
+@media all and (max-width: 768px) {
+    .card-list {
+        padding-top: 0rem;
+    }
+}
