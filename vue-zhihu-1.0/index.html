@@ -143,32 +143,9 @@
                 }
             }
         })
-        var router = new VueRouter()
-        router.map({
-            '/': {
-                name: 'index',
-                component: list
-            },
-            '/news/:id':{
-                 name: 'news',
-                 component: news
-            },
-            '/themes':{
-                 name: 'themes',
-                 component: themes
-            },
-            '/themes/:id':{
-                 name: 'theme-list',
-                 component: themesList
-            },
-            'about': {
-                name: 'about',
-                component: about
-            }
-        })
-        router.start(App, '#entry')
-
     </script>
+
+    <script type="text/javascript" src="./router.js"></script>
 
   </body>
 </html>
